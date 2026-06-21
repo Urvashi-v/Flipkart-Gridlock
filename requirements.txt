@@ -1,0 +1,15 @@
+# Pinned to the versions this project was built & verified on.
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.6.1
+scipy==1.13.0
+matplotlib==3.9.0
+folium==0.20.0
+pyarrow==24.0.0
+plotly==6.8.0
+streamlit==1.58.0
+fastapi==0.137.1
+uvicorn==0.49.0
+pytest==9.1.0
+anthropic==0.107.0
+requests==2.34.2

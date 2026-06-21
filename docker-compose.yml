@@ -1,0 +1,15 @@
+services:
+  gridlock:
+    build: .
+    image: gridlock:latest
+    container_name: gridlock
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    # To REBUILD artifacts from the raw CSV inside the container, uncomment and
+    # point the mount at your file, then run:
+    #   docker compose run --rm gridlock python run_all.py
+    # volumes:
+    #   - "C:/Users/URVASHI VERMA/Downloads/jan to may police violation_anonymized791b166.csv:/data/raw.csv:ro"
+    # environment:
+    #   - GRIDLOCK_RAW_CSV=/data/raw.csv

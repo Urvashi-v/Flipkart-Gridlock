@@ -1,0 +1,14 @@
+# keep the image small — exclude everything not needed at runtime
+.git
+.claude
+__pycache__/
+**/__pycache__/
+*.pyc
+*.log
+outputs/_streamlit.log
+# the raw 105 MB CSV is never baked into the image
+*.csv.gz
+*.zip
+.venv/
+venv/
+.ipynb_checkpoints/

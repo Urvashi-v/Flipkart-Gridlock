@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Weekend wholesale market surge",
+    "date": "2026-06-23",
+    "type": "festival",
+    "area": "KR Market Junction",
+    "expected_crowd": "high",
+    "why_congestion": "wholesale buyers and loading vehicles overrun the market approaches",
+    "source": "offline"
+  },
+  {
+    "name": "Mall end-of-season sale launch",
+    "date": "2026-06-24",
+    "type": "sale",
+    "area": "Safina Plaza Junction",
+    "expected_crowd": "high",
+    "why_congestion": "shopper inflow overflows mall parking onto feeder roads",
+    "source": "offline"
+  },
+  {
+    "name": "Temple festival procession",
+    "date": "2026-06-25",
+    "type": "festival",
+    "area": "Central Street Junction",
+    "expected_crowd": "high",
+    "why_congestion": "procession and devotee parking block the carriageway",
+    "source": "offline"
+  },
+  {
+    "name": "Weekend cinema / entertainment rush",
+    "date": "2026-06-26",
+    "type": "concert",
+    "area": "Sagar Theatre Junction",
+    "expected_crowd": "high",
+    "why_congestion": "show-time arrivals spike parking around the venue",
+    "source": "offline"
+  },
+  {
+    "name": "Metro-station feeder overflow",
+    "date": "2026-06-27",
+    "type": "other",
+    "area": "Hosahalli Metro Station",
+    "expected_crowd": "medium",
+    "why_congestion": "last-mile vehicles park on station approaches",
+    "source": "offline"
+  },
+  {
+    "name": "Commercial-street political rally",
+    "date": "2026-06-28",
+    "type": "rally",
+    "area": "Elite Junction",
+    "expected_crowd": "high",
+    "why_congestion": "assembly and march occupy road space for hours",
+    "source": "offline"
+  }
+]

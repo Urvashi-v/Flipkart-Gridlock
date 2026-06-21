@@ -1,0 +1,61 @@
+zone,junction_name,police_station,intervention_date,n_neighbours,treated_before,treated_after,treated_drop,neigh_before,neigh_after,neigh_gain,displacement_%,verdict
+208_224,BTP051 - Safina Plaza Junction,Shivajinagar,2024-02-17,16,34.18,21.96,12.21,74.82,70.86,-0.83,-6.8,Genuine reduction
+173_282,No Junction,HAL Old Airport,2023-12-29,12,19.86,50.75,-30.89,23.96,41.21,14.41,,Inconclusive (no drop)
+205_199,BTP040 - Elite Junction,Upparpet,2024-01-08,19,32.39,19.32,13.07,162.07,115.14,-41.8,-319.8,Genuine reduction
+275_208,No Junction,Kodigehalli,2024-01-15,7,17.39,45.79,-28.39,11.0,15.32,5.05,,Inconclusive (no drop)
+210_219,BTP211 - Central Street Junction,Shivajinagar,2024-01-28,17,41.5,8.04,33.46,37.14,23.32,-7.99,-23.9,Genuine reduction
+203_177,BTP020 - Hosahalli Metro Station,Vijayanagara,2023-12-25,9,35.93,15.0,20.93,18.93,23.68,3.04,14.5,Partial displacement
+196_199,BTP082 - KR Market Junction,City Market,2024-02-24,13,10.68,31.57,-20.89,53.32,73.64,22.13,,Inconclusive (no drop)
+205_200,BTP040 - Elite Junction,Upparpet,2024-01-26,21,20.14,9.96,10.18,179.75,112.25,-30.52,-299.8,Genuine reduction
+196_200,BTP082 - KR Market Junction,City Market,2024-01-27,16,21.82,16.11,5.71,88.36,56.18,-16.01,-280.2,Genuine reduction
+202_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-11,15,8.5,30.0,-21.5,55.57,54.14,0.97,,Inconclusive (no drop)
+204_199,BTP040 - Elite Junction,Upparpet,2024-03-10,16,20.46,10.04,10.43,94.86,109.82,19.9,190.8,Displacement (whack-a-mole)
+195_200,BTP082 - KR Market Junction,City Market,2024-01-21,13,11.57,19.71,-8.14,66.71,68.71,10.39,,Inconclusive (no drop)
+222_180,BTP027 - Modi Bridge Junction,Rajajinagar,2024-01-06,15,20.57,11.0,9.57,46.68,31.14,-16.16,-168.8,Genuine reduction
+359_274,No Junction,Chikkajala,2024-02-17,6,10.0,19.96,-9.96,12.29,26.68,14.91,,Inconclusive (no drop)
+205_202,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-26,22,15.79,6.57,9.21,114.21,75.68,-15.04,-163.2,Genuine reduction
+208_223,BTP051 - Safina Plaza Junction,Shivajinagar,2024-01-04,17,9.75,17.82,-8.07,80.07,122.21,39.55,,Inconclusive (no drop)
+200_199,BTP043 - Upparpet Junction,City Market,2024-02-02,9,17.21,9.54,7.68,22.07,10.25,-9.47,-123.3,Genuine reduction
+209_224,No Junction,Shivajinagar,2024-01-03,15,5.61,14.68,-9.07,67.46,103.39,33.55,,Inconclusive (no drop)
+248_209,No Junction,Hebbala,2023-12-22,5,17.93,10.64,7.29,11.89,9.32,-3.89,-53.4,Genuine reduction
+196_205,"BTP080 - NR Road, SP Road Junction",Halasuru Gate,2024-02-03,11,6.46,20.57,-14.11,9.29,17.18,8.91,,Inconclusive (no drop)
+209_221,BTP051 - Safina Plaza Junction,Shivajinagar,2023-12-28,20,3.54,14.07,-10.54,56.93,121.89,58.18,,Inconclusive (no drop)
+208_215,BTP042 - Minsk Square Junction (CTO),Shivajinagar,2024-02-23,6,4.46,14.54,-10.07,2.25,2.39,0.15,,Inconclusive (no drop)
+228_285,No Junction,K.R. Pura,2024-02-09,8,7.0,13.29,-6.29,14.25,21.5,8.45,,Inconclusive (no drop)
+206_199,BTP045 - Danvanthri Road Junction,Upparpet,2024-02-21,19,10.64,4.61,6.04,84.64,113.86,30.75,509.4,Displacement (whack-a-mole)
+204_200,BTP040 - Elite Junction,Upparpet,2024-01-20,22,15.82,6.68,9.14,201.82,138.36,-37.96,-415.2,Genuine reduction
+208_222,BTP051 - Safina Plaza Junction,Shivajinagar,2023-12-08,18,19.25,6.21,13.04,133.79,88.04,-48.69,-373.5,Genuine reduction
+196_172,"BTP016 - 5th Main Road, RPC Layout",Vijayanagara,2024-02-16,5,18.18,0.71,17.46,8.82,2.29,-6.15,-35.2,Genuine reduction
+207_222,BTP051 - Safina Plaza Junction,Shivajinagar,2023-12-15,14,13.86,3.93,9.93,96.96,76.71,-22.38,-225.4,Genuine reduction
+228_184,"BTP001 - 10th Cross, Dr. Rajkumar Road",Malleshwaram,2024-01-11,9,4.46,10.75,-6.29,21.96,25.18,4.16,,Inconclusive (no drop)
+209_222,BTP051 - Safina Plaza Junction,Shivajinagar,2024-01-27,20,13.82,5.96,7.86,130.71,89.36,-17.44,-221.9,Genuine reduction
+203_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-03-09,20,15.79,7.96,7.82,97.18,88.57,-4.05,-51.8,Genuine reduction
+219_266,No Junction,Mahadevapura,2023-12-18,4,5.71,11.39,-5.68,3.46,4.64,0.88,,Inconclusive (no drop)
+216_208,BTP032 - Windsor Circle,High ground,2024-01-24,6,15.39,4.57,10.82,17.89,8.04,-6.61,-61.0,Genuine reduction
+177_286,No Junction,HAL Old Airport,2024-01-05,8,17.64,3.54,14.11,6.5,9.93,3.26,23.1,Partial displacement
+202_181,"BTP070 - Cholurpalya Junction, Magadi Road",Magadi Road,2023-12-24,8,3.46,16.11,-12.64,6.57,21.54,14.35,,Inconclusive (no drop)
+228_286,No Junction,K.R. Pura,2024-02-09,8,6.64,13.75,-7.11,14.61,21.04,7.66,,Inconclusive (no drop)
+205_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-22,20,12.5,5.93,6.57,172.89,117.43,-30.64,-466.2,Genuine reduction
+231_182,No Junction,Malleshwaram,2024-03-11,10,7.21,12.43,-5.21,30.04,43.64,14.73,,Inconclusive (no drop)
+207_198,BTP057 - Anand Rao Junction,Upparpet,2024-01-08,16,10.25,3.36,6.89,115.14,83.5,-28.0,-406.2,Genuine reduction
+204_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-20,20,11.32,6.07,5.25,195.18,128.96,-41.55,-791.4,Genuine reduction
+206_198,BTP045 - Danvanthri Road Junction,Upparpet,2024-01-22,17,12.61,3.0,9.61,117.39,73.21,-27.32,-284.4,Genuine reduction
+228_196,No Junction,Malleshwaram,2024-03-01,8,11.04,4.5,6.54,20.32,10.32,-8.27,-126.5,Genuine reduction
+222_196,No Junction,Malleshwaram,2023-12-08,12,8.61,4.75,3.86,11.96,7.57,-4.66,-120.7,Genuine reduction
+203_181,"BTP070 - Cholurpalya Junction, Magadi Road",Magadi Road,2023-12-24,8,1.71,14.39,-12.68,8.32,23.25,14.15,,Inconclusive (no drop)
+231_184,No Junction,Malleshwaram,2024-03-11,13,5.61,9.11,-3.5,45.18,60.86,17.37,,Inconclusive (no drop)
+206_202,BTP058 - Subbanna Junction,Upparpet,2024-02-16,19,4.39,8.79,-4.39,83.43,94.71,14.94,,Inconclusive (no drop)
+205_195,BTP048 - Shanthala Junction,Chamarajpet,2024-01-24,8,11.29,2.43,8.86,12.79,6.5,-3.96,-44.7,Genuine reduction
+196_302,No Junction,HAL Old Airport,2023-12-10,7,0.43,12.21,-11.79,2.18,9.54,7.33,,Inconclusive (no drop)
+231_183,No Junction,Malleshwaram,2024-02-05,11,5.96,8.11,-2.14,32.75,29.96,-0.25,,Inconclusive (no drop)
+172_283,No Junction,HAL Old Airport,2024-01-20,10,15.5,3.18,12.32,70.36,41.39,-20.07,-162.9,Genuine reduction
+229_184,No Junction,Malleshwaram,2023-12-29,8,11.64,5.36,6.29,20.75,23.61,0.4,6.3,Genuine reduction
+222_272,No Junction,Mahadevapura,2023-12-16,5,0.75,14.64,-13.89,2.43,11.79,9.22,,Inconclusive (no drop)
+192_200,BTP104 - Medical College Circle,City Market,2024-01-13,10,2.71,8.68,-5.96,10.11,14.64,5.09,,Inconclusive (no drop)
+207_201,BTP058 - Subbanna Junction,Upparpet,2024-01-20,20,9.07,3.93,5.14,160.64,90.25,-50.09,-974.0,Genuine reduction
+220_179,BTP205 - Modi Hospital Junction,Vijayanagara,2024-03-02,11,9.93,3.5,6.43,34.64,26.86,-5.21,-81.1,Genuine reduction
+220_180,BTP027 - Modi Bridge Junction,Vijayanagara,2024-02-05,14,2.86,9.57,-6.71,32.54,37.61,7.59,,Inconclusive (no drop)
+196_201,BTP082 - KR Market Junction,City Market,2024-01-22,14,8.25,5.07,3.18,69.46,78.46,18.98,597.0,Displacement (whack-a-mole)
+230_184,No Junction,Malleshwaram,2024-03-11,13,4.14,9.0,-4.86,47.71,61.64,15.72,,Inconclusive (no drop)
+204_198,BTP045 - Danvanthri Road Junction,Upparpet,2024-01-25,14,8.43,1.96,6.46,125.36,72.89,-28.81,-445.6,Genuine reduction
+206_200,BTP058 - Subbanna Junction,Upparpet,2024-01-06,23,7.54,2.25,5.29,191.43,153.0,-40.98,-775.3,Genuine reduction

@@ -1,0 +1,61 @@
+rank,CIS,tier,junction_name,police_station,n_tickets,busiest_weekday,patrol_window,recommended_shift,window_share_%,lat,lon
+1,71.9,Critical,BTP051 - Safina Plaza Junction,Shivajinagar,4778,Sunday,09:00-12:00,A -Morning (06-11),53.6,12.981073,77.610239
+2,68.6,Critical,BTP082 - KR Market Junction,City Market,2365,Wednesday,23:00-02:00,D -Night (20-24),45.9,12.963782,77.576938
+3,68.0,Critical,BTP211 - Central Street Junction,Shivajinagar,2980,Monday,09:00-12:00,A -Morning (06-11),36.1,12.984032,77.603497
+4,67.8,Critical,BTP082 - KR Market Junction,City Market,2667,Sunday,09:00-12:00,A -Morning (06-11),28.9,12.964419,77.577106
+5,67.3,Critical,BTP040 - Elite Junction,Upparpet,2808,Tuesday,08:00-11:00,A -Morning (06-11),38.1,12.976899,77.577221
+6,66.7,Critical,BTP082 - KR Market Junction,City Market,2824,Wednesday,00:00-03:00,E -Late-night (00-06),33.6,12.964616,77.576116
+7,66.3,Critical,BTP044 - Sagar Theatre Junction,Upparpet,1886,Saturday,07:00-10:00,A -Morning (06-11),36.7,12.977026,77.579919
+8,66.2,Critical,BTP040 - Elite Junction,Upparpet,3784,Saturday,08:00-11:00,A -Morning (06-11),39.9,12.977165,77.576124
+9,65.0,High,BTP040 - Elite Junction,Upparpet,2383,Monday,08:00-11:00,A -Morning (06-11),38.4,12.975577,77.576121
+10,64.3,High,BTP051 - Safina Plaza Junction,Shivajinagar,1878,Sunday,08:00-11:00,A -Morning (06-11),55.8,12.981355,77.608948
+11,64.2,High,BTP044 - Sagar Theatre Junction,Upparpet,1411,Monday,08:00-11:00,A -Morning (06-11),42.9,12.973939,77.578549
+12,64.0,High,BTP045 - Danvanthri Road Junction,Upparpet,1132,Sunday,03:00-06:00,E -Late-night (00-06),28.0,12.978193,77.574373
+13,63.4,High,"BTP001 - 10th Cross, Dr. Rajkumar Road",Malleshwaram,1420,Sunday,08:00-11:00,A -Morning (06-11),30.0,13.008264,77.554724
+14,63.2,High,BTP057 - Anand Rao Junction,Upparpet,1251,Saturday,01:00-04:00,E -Late-night (00-06),29.7,12.979706,77.574933
+15,63.0,High,BTP044 - Sagar Theatre Junction,Upparpet,2575,Sunday,08:00-11:00,A -Morning (06-11),41.9,12.97308,77.578888
+16,62.3,High,BTP027 - Modi Bridge Junction,Rajajinagar,2193,Tuesday,07:00-10:00,A -Morning (06-11),43.0,12.999695,77.549623
+17,62.2,High,BTP057 - Anand Rao Junction,Upparpet,848,Sunday,09:00-12:00,A -Morning (06-11),33.5,12.978458,77.573489
+18,61.8,High,No Junction,HAL Old Airport,1373,Thursday,07:00-10:00,A -Morning (06-11),56.2,12.939638,77.695698
+19,61.8,High,BTP020 - Hosahalli Metro Station,Vijayanagara,2926,Tuesday,04:00-07:00,E -Late-night (00-06),39.8,12.974399,77.545276
+20,61.7,High,BTP104 - Medical College Circle,City Market,931,Wednesday,03:00-06:00,E -Late-night (00-06),30.9,12.959247,77.577255
+21,61.5,High,BTP045 - Danvanthri Road Junction,Upparpet,858,Saturday,08:00-11:00,A -Morning (06-11),37.8,12.975495,77.574783
+22,61.4,High,BTP045 - Danvanthri Road Junction,Upparpet,1533,Saturday,09:00-12:00,A -Morning (06-11),44.2,12.977978,77.575497
+23,61.3,High,"BTP083 - AS Char Street, Mysore Road",Chamarajpet,753,Friday,09:00-12:00,A -Morning (06-11),37.1,12.967675,77.574502
+24,61.3,High,"BTP080 - NR Road, SP Road Junction",Halasuru Gate,1806,Tuesday,09:00-12:00,A -Morning (06-11),46.2,12.964727,77.584031
+25,61.3,High,BTP048 - Shanthala Junction,Chamarajpet,1053,Tuesday,05:00-08:00,E -Late-night (00-06),30.5,12.977246,77.57075
+26,61.2,High,BTP051 - Safina Plaza Junction,Shivajinagar,1413,Sunday,10:00-13:00,A -Morning (06-11),50.5,12.982135,77.607667
+27,61.0,High,BTP044 - Sagar Theatre Junction,Upparpet,1298,Sunday,08:00-11:00,A -Morning (06-11),34.7,12.976832,77.578524
+28,60.8,High,BTP051 - Safina Plaza Junction,Shivajinagar,1495,Sunday,09:00-12:00,A -Morning (06-11),53.6,12.981057,77.607759
+29,60.6,High,"BTP083 - AS Char Street, Mysore Road",City Market,661,Sunday,23:00-02:00,D -Night (20-24),68.4,12.964769,77.574471
+30,60.4,High,BTP058 - Subbanna Junction,Upparpet,1058,Sunday,00:00-03:00,E -Late-night (00-06),49.0,12.978186,77.579627
+31,60.2,High,"BTP083 - AS Char Street, Mysore Road",Chamarajpet,267,Sunday,07:00-10:00,A -Morning (06-11),33.7,12.964856,77.573617
+32,60.1,High,BTP082 - KR Market Junction,City Market,874,Sunday,08:00-11:00,A -Morning (06-11),42.3,12.964421,77.578557
+33,59.7,High,BTP027 - Modi Bridge Junction,Vijayanagara,883,Wednesday,08:00-11:00,A -Morning (06-11),35.4,12.997562,77.549636
+34,59.5,High,BTP051 - Safina Plaza Junction,Shivajinagar,1422,Sunday,09:00-12:00,A -Morning (06-11),43.7,12.979696,77.607184
+35,59.3,High,BTP058 - Subbanna Junction,Upparpet,928,Friday,00:00-03:00,E -Late-night (00-06),51.8,12.979102,77.578558
+36,59.3,High,BTP051 - Safina Plaza Junction,Shivajinagar,1643,Sunday,08:00-11:00,A -Morning (06-11),58.6,12.982176,77.606395
+37,59.2,High,BTP058 - Subbanna Junction,Upparpet,849,Friday,00:00-03:00,E -Late-night (00-06),45.2,12.977967,77.57731
+38,59.0,High,BTP040 - Elite Junction,Upparpet,1520,Saturday,08:00-11:00,A -Morning (06-11),43.0,12.975916,77.577301
+39,58.6,High,"BTP016 - 5th Main Road, RPC Layout",Vijayanagara,1453,Saturday,10:00-13:00,A -Morning (06-11),40.7,12.964909,77.538759
+40,58.5,High,"BTP095 - Satellite Bus Stand, Mysore Road",Byatarayanapura,498,Saturday,10:00-13:00,A -Morning (06-11),40.2,12.953617,77.542753
+41,58.4,High,BTP205 - Modi Hospital Junction,Vijayanagara,915,Thursday,08:00-11:00,A -Morning (06-11),42.4,12.997471,77.548166
+42,58.2,High,BTP126 - Dairy Circle,Mico Layout,143,Saturday,05:00-08:00,E -Late-night (00-06),74.8,12.936618,77.601739
+43,57.6,High,"BTP083 - AS Char Street, Mysore Road",Chamarajpet,169,Sunday,07:00-10:00,A -Morning (06-11),51.5,12.965827,77.573714
+44,57.6,High,BTP042 - Minsk Square Junction (CTO),Shivajinagar,1614,Thursday,03:00-06:00,E -Late-night (00-06),47.9,12.981126,77.598437
+45,57.5,High,BTP104 - Medical College Circle,City Market,561,Friday,12:00-15:00,B -Midday (11-16),53.7,12.959356,77.576055
+46,57.5,High,BTP044 - Sagar Theatre Junction,Upparpet,1205,Saturday,08:00-11:00,A -Morning (06-11),48.9,12.975812,77.578468
+47,57.4,High,BTP057 - Anand Rao Junction,Upparpet,514,Sunday,01:00-04:00,E -Late-night (00-06),29.6,12.980537,77.574727
+48,57.3,High,BTP045 - Danvanthri Road Junction,Upparpet,473,Saturday,09:00-12:00,A -Morning (06-11),31.3,12.977058,77.574456
+49,57.2,High,BTP032 - Windsor Circle,High ground,1381,Saturday,02:00-05:00,E -Late-night (00-06),48.0,12.991493,77.588543
+50,57.1,High,BTP058 - Subbanna Junction,Upparpet,759,Friday,00:00-03:00,E -Late-night (00-06),73.3,12.978409,77.578552
+51,57.1,High,No Junction,Mahadevapura,1382,Saturday,09:00-12:00,A -Morning (06-11),46.5,12.996151,77.668432
+52,57.0,High,BTP038 - Mysore Bank Junction,Upparpet,398,Wednesday,08:00-11:00,A -Morning (06-11),41.5,12.975702,77.581453
+53,56.9,High,BTP023 - Mahalaxmi Layout Entrance,Rajajinagar,791,Tuesday,09:00-12:00,A -Morning (06-11),71.9,13.008042,77.548513
+54,56.8,High,BTP108 - Tagore Park Junction,Basavanagudi,776,Sunday,10:00-13:00,A -Morning (06-11),37.0,12.943195,77.571116
+55,56.2,High,BTP082 - KR Market Junction,Halasuru Gate,465,Sunday,09:00-12:00,A -Morning (06-11),42.8,12.964481,77.579956
+56,56.0,High,BTP211 - Central Street Junction,Shivajinagar,509,Thursday,10:00-13:00,A -Morning (06-11),38.9,12.980737,77.603264
+57,56.0,High,"BTP083 - AS Char Street, Mysore Road",Chamarajpet,284,Sunday,02:00-05:00,E -Late-night (00-06),33.5,12.96618,77.574101
+58,55.9,High,BTP211 - Central Street Junction,Shivajinagar,424,Sunday,10:00-13:00,A -Morning (06-11),38.0,12.984479,77.602308
+59,55.9,High,BTP096 - Gali Anjaneya Temple,Byatarayanapura,561,Sunday,01:00-04:00,E -Late-night (00-06),29.1,12.952469,77.541161
+60,55.9,High,BTP140 - Madiwala Check Post,Mico Layout,78,Thursday,02:00-05:00,E -Late-night (00-06),51.3,12.93004,77.609622

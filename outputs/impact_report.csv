@@ -1,0 +1,61 @@
+zone,junction_name,police_station,intervention_date,before_mean,after_mean,raw_change_%,city_change_%,did_change_%,p_value,significant,verdict
+196_172,"BTP016 - 5th Main Road, RPC Layout",Vijayanagara,2024-02-16,18.18,0.71,-96.1,-4.4,-91.7,0.0002,True,Strong reduction
+177_286,No Junction,HAL Old Airport,2024-01-05,17.64,3.54,-80.0,2.6,-82.6,0.0178,True,Strong reduction
+207_222,BTP051 - Safina Plaza Junction,Shivajinagar,2023-12-15,13.86,3.93,-71.6,2.2,-73.8,0.0013,True,Strong reduction
+206_200,BTP058 - Subbanna Junction,Upparpet,2024-01-06,7.54,2.25,-70.1,1.3,-71.5,0.0,True,Strong reduction
+208_222,BTP051 - Safina Plaza Junction,Shivajinagar,2023-12-08,19.25,6.21,-67.7,2.2,-69.9,0.0009,True,Strong reduction
+203_177,BTP020 - Hosahalli Metro Station,Vijayanagara,2023-12-25,35.93,15.0,-58.3,9.0,-67.3,0.004,True,Strong reduction
+172_283,No Junction,HAL Old Airport,2024-01-20,15.5,3.18,-79.5,-12.6,-66.9,0.0307,True,Strong reduction
+229_184,"BTP001 - 10th Cross, Dr. Rajkumar Road",Malleshwaram,2023-12-29,11.64,5.36,-54.0,11.9,-65.8,0.0565,False,Reduction
+210_219,BTP211 - Central Street Junction,Shivajinagar,2024-01-28,41.5,8.04,-80.6,-15.7,-64.9,0.0002,True,Strong reduction
+207_198,BTP057 - Anand Rao Junction,Upparpet,2024-01-08,10.25,3.36,-67.2,-3.2,-64.1,0.0008,True,Strong reduction
+206_198,BTP045 - Danvanthri Road Junction,Upparpet,2024-01-22,12.61,3.0,-76.2,-14.4,-61.8,0.001,True,Strong reduction
+205_195,BTP048 - Shanthala Junction,Chamarajpet,2024-01-24,11.29,2.43,-78.5,-18.2,-60.3,0.007,True,Strong reduction
+204_198,BTP045 - Danvanthri Road Junction,Upparpet,2024-01-25,8.43,1.96,-76.7,-18.9,-57.8,0.0025,True,Strong reduction
+220_179,BTP027 - Modi Bridge Junction,Vijayanagara,2024-03-02,9.93,3.5,-64.7,-7.4,-57.3,0.0029,True,Strong reduction
+206_199,BTP045 - Danvanthri Road Junction,Upparpet,2024-02-21,10.64,4.61,-56.7,-1.8,-54.9,0.0086,True,Strong reduction
+216_208,BTP032 - Windsor Circle,High ground,2024-01-24,15.39,4.57,-70.3,-18.2,-52.1,0.0012,True,Strong reduction
+248_209,No Junction,Hebbala,2023-12-22,17.93,10.64,-40.6,11.1,-51.8,0.0963,False,Reduction
+228_196,No Junction,Malleshwaram,2024-03-01,11.04,4.5,-59.2,-8.5,-50.7,0.0125,True,Strong reduction
+222_180,BTP027 - Modi Bridge Junction,Rajajinagar,2024-01-06,20.57,11.0,-46.5,1.3,-47.9,0.0315,True,Strong reduction
+222_196,No Junction,Malleshwaram,2023-12-08,8.61,4.75,-44.8,2.2,-47.0,0.0174,True,Strong reduction
+204_199,BTP040 - Elite Junction,Upparpet,2024-03-10,20.46,10.04,-51.0,-5.2,-45.8,0.0355,True,Strong reduction
+204_200,BTP040 - Elite Junction,Upparpet,2024-01-20,15.82,6.68,-57.8,-12.6,-45.2,0.0134,True,Strong reduction
+203_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-03-09,15.79,7.96,-49.5,-4.7,-44.9,0.0036,True,Strong reduction
+207_201,BTP058 - Subbanna Junction,Upparpet,2024-01-20,9.07,3.93,-56.7,-12.6,-44.1,0.0779,False,Reduction
+209_222,BTP051 - Safina Plaza Junction,Shivajinagar,2024-01-27,13.82,5.96,-56.8,-18.3,-38.5,0.001,True,Strong reduction
+205_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-22,12.5,5.93,-52.6,-14.4,-38.2,0.048,True,Strong reduction
+205_202,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-26,15.79,6.57,-58.4,-20.6,-37.8,0.0001,True,Strong reduction
+205_199,BTP040 - Elite Junction,Upparpet,2024-01-08,32.39,19.32,-40.4,-3.2,-37.2,0.0184,True,Strong reduction
+200_199,BTP043 - Upparpet Junction,City Market,2024-02-02,17.21,9.54,-44.6,-10.7,-34.0,0.0285,True,Strong reduction
+204_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-20,11.32,6.07,-46.4,-12.6,-33.7,0.1498,False,Reduction
+208_224,BTP051 - Safina Plaza Junction,Shivajinagar,2024-02-17,34.18,21.96,-35.7,-4.2,-31.5,0.1572,False,Reduction
+205_200,BTP040 - Elite Junction,Upparpet,2024-01-26,20.14,9.96,-50.5,-20.6,-30.0,0.0045,True,Strong reduction
+196_201,BTP082 - KR Market Junction,Halasuru Gate,2024-01-22,8.25,5.07,-38.5,-14.4,-24.2,0.0994,False,Reduction
+196_200,BTP082 - KR Market Junction,City Market,2024-01-27,21.82,16.11,-26.2,-18.3,-7.9,0.1684,False,No clear effect
+231_183,No Junction,Malleshwaram,2024-02-05,5.96,8.11,35.9,-7.7,43.7,0.1992,False,Worsened / rebound
+231_184,No Junction,Malleshwaram,2024-03-11,5.61,9.11,62.4,-3.7,66.2,0.1209,False,Worsened / rebound
+231_182,No Junction,Malleshwaram,2024-03-11,7.21,12.43,72.3,-3.7,76.0,0.0966,False,Worsened / rebound
+208_223,BTP051 - Safina Plaza Junction,Shivajinagar,2024-01-04,9.75,17.82,82.8,3.2,79.5,0.0153,True,Worsened / rebound
+195_200,BTP082 - KR Market Junction,City Market,2024-01-21,11.57,19.71,70.4,-12.6,83.0,0.0831,False,Worsened / rebound
+219_266,No Junction,Mahadevapura,2023-12-18,5.71,11.39,99.4,8.8,90.6,0.0391,True,Worsened / rebound
+228_285,No Junction,K.R. Pura,2024-02-09,7.0,13.29,89.8,-8.4,98.2,0.0182,True,Worsened / rebound
+359_274,No Junction,Chikkajala,2024-02-17,10.0,19.96,99.6,-4.2,103.8,0.0008,True,Worsened / rebound
+206_202,BTP044 - Sagar Theatre Junction,Upparpet,2024-02-16,4.39,8.79,100.0,-4.4,104.4,0.0666,False,Worsened / rebound
+228_286,No Junction,K.R. Pura,2024-02-09,6.64,13.75,107.0,-8.4,115.4,0.0059,True,Worsened / rebound
+230_184,No Junction,Malleshwaram,2024-03-11,4.14,9.0,117.2,-3.7,121.0,0.043,True,Worsened / rebound
+173_282,No Junction,HAL Old Airport,2023-12-29,19.86,50.75,155.6,11.9,143.7,0.0166,True,Worsened / rebound
+228_184,"BTP001 - 10th Cross, Dr. Rajkumar Road",Malleshwaram,2024-01-11,4.46,10.75,140.8,-4.3,145.1,0.01,True,Worsened / rebound
+209_224,No Junction,Shivajinagar,2024-01-03,5.61,14.68,161.8,3.5,158.3,0.0008,True,Worsened / rebound
+275_208,No Junction,Kodigehalli,2024-01-15,17.39,45.79,163.2,-6.6,169.9,0.0013,True,Worsened / rebound
+196_199,"BTP083 - AS Char Street, Mysore Road",City Market,2024-02-24,10.68,31.57,195.7,-3.4,199.1,0.0004,True,Worsened / rebound
+192_200,BTP118 - Basappa Circle,City Market,2024-01-13,2.71,8.68,219.7,-5.5,225.2,0.0041,True,Worsened / rebound
+208_215,BTP042 - Minsk Square Junction (CTO),Shivajinagar,2024-02-23,4.46,14.54,225.6,-0.3,225.9,0.013,True,Worsened / rebound
+196_205,"BTP080 - NR Road, SP Road Junction",Halasuru Gate,2024-02-03,6.46,20.57,218.2,-10.9,229.1,0.0153,True,Worsened / rebound
+220_180,BTP027 - Modi Bridge Junction,Vijayanagara,2024-02-05,2.86,9.57,235.0,-7.7,242.7,0.0005,True,Worsened / rebound
+202_201,BTP044 - Sagar Theatre Junction,Upparpet,2024-01-11,8.5,30.0,252.9,-4.3,257.3,0.0001,True,Worsened / rebound
+209_221,BTP051 - Safina Plaza Junction,Shivajinagar,2023-12-28,3.54,14.07,298.0,11.9,286.1,0.0602,False,Worsened / rebound
+202_181,"BTP070 - Cholurpalya Junction, Magadi Road",Magadi Road,2023-12-24,3.46,16.11,364.9,9.4,355.6,0.0006,True,Worsened / rebound
+203_181,"BTP070 - Cholurpalya Junction, Magadi Road",Magadi Road,2023-12-24,1.71,14.39,739.6,9.4,730.2,0.0,True,Worsened / rebound
+222_272,No Junction,Mahadevapura,2023-12-16,0.75,14.64,1852.4,5.6,1846.8,0.0002,True,Worsened / rebound
+196_302,No Junction,HAL Old Airport,2023-12-10,0.43,12.21,2750.0,1.3,2748.7,0.0006,True,Worsened / rebound

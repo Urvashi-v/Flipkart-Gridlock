@@ -1,0 +1,1768 @@
+{
+  "generated": "2026-06-21T00:32:03",
+  "source": "simulated",
+  "districts": [
+    {
+      "district": "Upparpet",
+      "lat": 12.976761,
+      "lon": 77.578031,
+      "n_hotspots": 44,
+      "violations": 34631,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.97676,77.57803,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP040 - Elite Junction",
+          "lat": 12.977165,
+          "lon": 77.576124,
+          "tickets": 3784,
+          "cis": 66.2,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97717,77.57612,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP040 - Elite Junction",
+          "lat": 12.976899,
+          "lon": 77.577221,
+          "tickets": 2808,
+          "cis": 67.3,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97690,77.57722,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP044 - Sagar Theatre Junction",
+          "lat": 12.97308,
+          "lon": 77.578888,
+          "tickets": 2575,
+          "cis": 63.0,
+          "violation": "NO PARKING",
+          "context": "Entertainment",
+          "action": "Stagger show-time arrivals; deploy at peak hours.",
+          "gmaps": "https://www.google.com/maps/@12.97308,77.57889,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP040 - Elite Junction",
+          "lat": 12.975577,
+          "lon": 77.576121,
+          "tickets": 2383,
+          "cis": 65.0,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97558,77.57612,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP044 - Sagar Theatre Junction",
+          "lat": 12.977026,
+          "lon": 77.579919,
+          "tickets": 1886,
+          "cis": 66.3,
+          "violation": "WRONG PARKING",
+          "context": "Entertainment",
+          "action": "Stagger show-time arrivals; deploy at peak hours.",
+          "gmaps": "https://www.google.com/maps/@12.97703,77.57992,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-06-25",
+          "event": "Temple festival procession",
+          "risk": "Severe",
+          "why": "Temple festival procession (festival) near Central Street Junction coincides with a known hotspot at BTP040 - Elite Junction; procession and devotee parking block the carriageway.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        },
+        {
+          "date": "2026-06-26",
+          "event": "Weekend cinema / entertainment rush",
+          "risk": "Severe",
+          "why": "Weekend cinema / entertainment rush (concert) near Sagar Theatre Junction coincides with a known hotspot at BTP044 - Sagar Theatre Junction; show-time arrivals spike parking around the venue.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        },
+        {
+          "date": "2026-06-28",
+          "event": "Commercial-street political rally",
+          "risk": "Severe",
+          "why": "Commercial-street political rally (rally) near Elite Junction coincides with a known hotspot at BTP040 - Elite Junction; assembly and march occupy road space for hours.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        },
+        {
+          "date": "2026-06-28",
+          "event": "Commercial-street political rally",
+          "risk": "Severe",
+          "why": "Commercial-street political rally (rally) near Elite Junction coincides with a known hotspot at BTP045 - Danvanthri Road Junction; assembly and march occupy road space for hours.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        }
+      ],
+      "pressure": 1.0,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Shivajinagar",
+      "lat": 12.98303,
+      "lon": 77.605736,
+      "n_hotspots": 53,
+      "violations": 28098,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.98303,77.60574,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP051 - Safina Plaza Junction",
+          "lat": 12.981073,
+          "lon": 77.610239,
+          "tickets": 4778,
+          "cis": 71.9,
+          "violation": "WRONG PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.98107,77.61024,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP211 - Central Street Junction",
+          "lat": 12.984032,
+          "lon": 77.603497,
+          "tickets": 2980,
+          "cis": 68.0,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.98403,77.60350,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP051 - Safina Plaza Junction",
+          "lat": 12.981355,
+          "lon": 77.608948,
+          "tickets": 1878,
+          "cis": 64.3,
+          "violation": "WRONG PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.98135,77.60895,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.982271,
+          "lon": 77.610489,
+          "tickets": 1811,
+          "cis": 53.2,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.98227,77.61049,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP051 - Safina Plaza Junction",
+          "lat": 12.982176,
+          "lon": 77.606395,
+          "tickets": 1643,
+          "cis": 59.3,
+          "violation": "WRONG PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.98218,77.60639,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-06-24",
+          "event": "Mall end-of-season sale launch",
+          "risk": "Severe",
+          "why": "Mall end-of-season sale launch (sale) near Safina Plaza Junction coincides with a known hotspot at BTP051 - Safina Plaza Junction; shopper inflow overflows mall parking onto feeder roads.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        },
+        {
+          "date": "2026-06-25",
+          "event": "Temple festival procession",
+          "risk": "Severe",
+          "why": "Temple festival procession (festival) near Central Street Junction coincides with a known hotspot at BTP211 - Central Street Junction; procession and devotee parking block the carriageway.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        }
+      ],
+      "pressure": 0.811,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Malleshwaram",
+      "lat": 13.004289,
+      "lon": 77.561207,
+      "n_hotspots": 66,
+      "violations": 21379,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@13.00429,77.56121,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP001 - 10th Cross, Dr. Rajkumar Road",
+          "lat": 13.008264,
+          "lon": 77.554724,
+          "tickets": 1420,
+          "cis": 63.4,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00826,77.55472,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.011993,
+          "lon": 77.552375,
+          "tickets": 1281,
+          "cis": 42.7,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.01199,77.55237,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.007786,
+          "lon": 77.57115,
+          "tickets": 1107,
+          "cis": 40.8,
+          "violation": "WRONG PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@13.00779,77.57115,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.999646,
+          "lon": 77.571365,
+          "tickets": 1092,
+          "cis": 40.7,
+          "violation": "WRONG PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.99965,77.57136,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.011822,
+          "lon": 77.554537,
+          "tickets": 1060,
+          "cis": 40.0,
+          "violation": "WRONG PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@13.01182,77.55454,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.617,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "HAL Old Airport",
+      "lat": 12.948139,
+      "lon": 77.699831,
+      "n_hotspots": 78,
+      "violations": 20174,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.94814,77.69983,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.933723,
+          "lon": 77.690912,
+          "tickets": 4698,
+          "cis": 49.3,
+          "violation": "NO PARKING",
+          "context": "Education",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.93372,77.69091,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.939638,
+          "lon": 77.695698,
+          "tickets": 1373,
+          "cis": 61.8,
+          "violation": "PARKING IN A MAIN ROAD",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.93964,77.69570,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.964838,
+          "lon": 77.718164,
+          "tickets": 1010,
+          "cis": 39.2,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96484,77.71816,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.932651,
+          "lon": 77.691489,
+          "tickets": 968,
+          "cis": 36.1,
+          "violation": "NO PARKING",
+          "context": "Education",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.93265,77.69149,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.935099,
+          "lon": 77.690355,
+          "tickets": 705,
+          "cis": 38.3,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.93510,77.69036,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.583,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "City Market",
+      "lat": 12.963524,
+      "lon": 77.578148,
+      "n_hotspots": 32,
+      "violations": 17470,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.96352,77.57815,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP082 - KR Market Junction",
+          "lat": 12.964616,
+          "lon": 77.576116,
+          "tickets": 2824,
+          "cis": 66.7,
+          "violation": "WRONG PARKING",
+          "context": "Wholesale market",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96462,77.57612,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP082 - KR Market Junction",
+          "lat": 12.964419,
+          "lon": 77.577106,
+          "tickets": 2667,
+          "cis": 67.8,
+          "violation": "WRONG PARKING",
+          "context": "Wholesale market",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96442,77.57711,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP082 - KR Market Junction",
+          "lat": 12.963782,
+          "lon": 77.576938,
+          "tickets": 2365,
+          "cis": 68.6,
+          "violation": "WRONG PARKING",
+          "context": "Wholesale market",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96378,77.57694,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP043 - Upparpet Junction",
+          "lat": 12.969982,
+          "lon": 77.575755,
+          "tickets": 1844,
+          "cis": 55.3,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96998,77.57575,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP104 - Medical College Circle",
+          "lat": 12.959247,
+          "lon": 77.577255,
+          "tickets": 931,
+          "cis": 61.7,
+          "violation": "WRONG PARKING",
+          "context": "Hospital",
+          "action": "Protect emergency lanes; mark visitor drop-off.",
+          "gmaps": "https://www.google.com/maps/@12.95925,77.57726,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-06-23",
+          "event": "Weekend wholesale market surge",
+          "risk": "Severe",
+          "why": "Weekend wholesale market surge (festival) near KR Market Junction coincides with a known hotspot at BTP082 - KR Market Junction; wholesale buyers and loading vehicles overrun the market approaches.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        },
+        {
+          "date": "2026-06-23",
+          "event": "Weekend wholesale market surge",
+          "risk": "Severe",
+          "why": "Weekend wholesale market surge (festival) near KR Market Junction coincides with a known hotspot at BTP104 - Medical College Circle; wholesale buyers and loading vehicles overrun the market approaches.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        },
+        {
+          "date": "2026-06-24",
+          "event": "Mall end-of-season sale launch",
+          "risk": "Severe",
+          "why": "Mall end-of-season sale launch (sale) near Safina Plaza Junction coincides with a known hotspot at BTP082 - KR Market Junction; shopper inflow overflows mall parking onto feeder roads.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        }
+      ],
+      "pressure": 0.504,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Vijayanagara",
+      "lat": 12.978923,
+      "lon": 77.542032,
+      "n_hotspots": 49,
+      "violations": 14093,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.97892,77.54203,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP020 - Hosahalli Metro Station",
+          "lat": 12.974399,
+          "lon": 77.545276,
+          "tickets": 2926,
+          "cis": 61.8,
+          "violation": "WRONG PARKING",
+          "context": "Metro / Transit hub",
+          "action": "Clear station approaches; push last-mile parking to lots.",
+          "gmaps": "https://www.google.com/maps/@12.97440,77.54528,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP016 - 5th Main Road, RPC Layout",
+          "lat": 12.964909,
+          "lon": 77.538759,
+          "tickets": 1453,
+          "cis": 58.6,
+          "violation": "WRONG PARKING",
+          "context": "Religious",
+          "action": "Manage event/procession parking; pre-mark no-parking.",
+          "gmaps": "https://www.google.com/maps/@12.96491,77.53876,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP205 - Modi Hospital Junction",
+          "lat": 12.997471,
+          "lon": 77.548166,
+          "tickets": 915,
+          "cis": 58.4,
+          "violation": "WRONG PARKING",
+          "context": "Hospital",
+          "action": "Protect emergency lanes; mark visitor drop-off.",
+          "gmaps": "https://www.google.com/maps/@12.99747,77.54817,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP027 - Modi Bridge Junction",
+          "lat": 12.997562,
+          "lon": 77.549636,
+          "tickets": 883,
+          "cis": 59.7,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99756,77.54964,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP069 - MC Circle",
+          "lat": 12.974424,
+          "lon": 77.546782,
+          "tickets": 727,
+          "cis": 52.4,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97442,77.54678,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-06-27",
+          "event": "Metro-station feeder overflow",
+          "risk": "High",
+          "why": "Metro-station feeder overflow (other) near Hosahalli Metro Station coincides with a known hotspot at BTP020 - Hosahalli Metro Station; last-mile vehicles park on station approaches.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        }
+      ],
+      "pressure": 0.407,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Rajajinagar",
+      "lat": 12.997603,
+      "lon": 77.547769,
+      "n_hotspots": 62,
+      "violations": 10331,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.99760,77.54777,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP027 - Modi Bridge Junction",
+          "lat": 12.999695,
+          "lon": 77.549623,
+          "tickets": 2193,
+          "cis": 62.3,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99970,77.54962,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP023 - Mahalaxmi Layout Entrance",
+          "lat": 13.008042,
+          "lon": 77.548513,
+          "tickets": 791,
+          "cis": 56.9,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00804,77.54851,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP061 - Bhashyam Circle",
+          "lat": 12.985053,
+          "lon": 77.553653,
+          "tickets": 579,
+          "cis": 51.8,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.98505,77.55365,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP027 - Modi Bridge Junction",
+          "lat": 12.99886,
+          "lon": 77.549639,
+          "tickets": 424,
+          "cis": 49.7,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99886,77.54964,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP011 - RR Kalyana Mantapa, Dr. Rajkumar Road",
+          "lat": 12.993049,
+          "lon": 77.55382,
+          "tickets": 370,
+          "cis": 52.2,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99305,77.55382,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.298,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Kodigehalli",
+      "lat": 13.056899,
+      "lon": 77.586505,
+      "n_hotspots": 41,
+      "violations": 8994,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@13.05690,77.58651,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 13.071278,
+          "lon": 77.588102,
+          "tickets": 3539,
+          "cis": 44.5,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.07128,77.58810,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.070346,
+          "lon": 77.587754,
+          "tickets": 745,
+          "cis": 34.9,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.07035,77.58775,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.047417,
+          "lon": 77.575885,
+          "tickets": 663,
+          "cis": 32.7,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.04742,77.57589,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.070294,
+          "lon": 77.587289,
+          "tickets": 611,
+          "cis": 32.1,
+          "violation": "WRONG PARKING",
+          "context": "Religious",
+          "action": "Manage event/procession parking; pre-mark no-parking.",
+          "gmaps": "https://www.google.com/maps/@13.07029,77.58729,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.071062,
+          "lon": 77.587424,
+          "tickets": 294,
+          "cis": 27.3,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.07106,77.58742,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.26,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Magadi Road",
+      "lat": 12.975963,
+      "lon": 77.553378,
+      "n_hotspots": 44,
+      "violations": 7639,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@12.97596,77.55338,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP070 - Cholurpalya Junction, Magadi Road",
+          "lat": 12.973432,
+          "lon": 77.551014,
+          "tickets": 1329,
+          "cis": 52.8,
+          "violation": "NO PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.97343,77.55101,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP070 - Cholurpalya Junction, Magadi Road",
+          "lat": 12.973731,
+          "lon": 77.551219,
+          "tickets": 1072,
+          "cis": 52.8,
+          "violation": "NO PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.97373,77.55122,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.975741,
+          "lon": 77.558987,
+          "tickets": 765,
+          "cis": 32.4,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97574,77.55899,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP074 - Leprosy Hospital Junction",
+          "lat": 12.975728,
+          "lon": 77.560627,
+          "tickets": 497,
+          "cis": 54.0,
+          "violation": "WRONG PARKING",
+          "context": "Hospital",
+          "action": "Protect emergency lanes; mark visitor drop-off.",
+          "gmaps": "https://www.google.com/maps/@12.97573,77.56063,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP010 - Rajajinagar Entrance",
+          "lat": 12.980735,
+          "lon": 77.55825,
+          "tickets": 378,
+          "cis": 50.9,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.98074,77.55825,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.221,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Jeevanbheemanagar",
+      "lat": 12.968188,
+      "lon": 77.645264,
+      "n_hotspots": 44,
+      "violations": 5935,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@12.96819,77.64526,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.97174,
+          "lon": 77.658033,
+          "tickets": 628,
+          "cis": 32.9,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97174,77.65803,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.971693,
+          "lon": 77.658186,
+          "tickets": 563,
+          "cis": 32.7,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97169,77.65819,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.959581,
+          "lon": 77.649036,
+          "tickets": 380,
+          "cis": 34.4,
+          "violation": "NO PARKING",
+          "context": "Hospital",
+          "action": "Protect emergency lanes; mark visitor drop-off.",
+          "gmaps": "https://www.google.com/maps/@12.95958,77.64904,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.969251,
+          "lon": 77.641371,
+          "tickets": 293,
+          "cis": 25.6,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96925,77.64137,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.969978,
+          "lon": 77.641177,
+          "tickets": 259,
+          "cis": 27.5,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96998,77.64118,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.171,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "K.R. Pura",
+      "lat": 13.014966,
+      "lon": 77.705471,
+      "n_hotspots": 18,
+      "violations": 5885,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@13.01497,77.70547,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 13.008218,
+          "lon": 77.694922,
+          "tickets": 1605,
+          "cis": 50.5,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00822,77.69492,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.008197,
+          "lon": 77.695758,
+          "tickets": 1329,
+          "cis": 51.0,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00820,77.69576,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.005388,
+          "lon": 77.685234,
+          "tickets": 680,
+          "cis": 38.0,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00539,77.68523,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.008242,
+          "lon": 77.693718,
+          "tickets": 390,
+          "cis": 38.0,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00824,77.69372,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.006118,
+          "lon": 77.686548,
+          "tickets": 316,
+          "cis": 30.5,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00612,77.68655,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.17,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Mahadevapura",
+      "lat": 12.992098,
+      "lon": 77.703707,
+      "n_hotspots": 30,
+      "violations": 5565,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.99210,77.70371,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.996151,
+          "lon": 77.668432,
+          "tickets": 1382,
+          "cis": 57.1,
+          "violation": "PARKING IN A MAIN ROAD",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99615,77.66843,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.000205,
+          "lon": 77.676868,
+          "tickets": 954,
+          "cis": 47.7,
+          "violation": "PARKING IN A MAIN ROAD",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00021,77.67687,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.995329,
+          "lon": 77.69619,
+          "tickets": 550,
+          "cis": 42.0,
+          "violation": "PARKING IN A MAIN ROAD",
+          "context": "Wholesale market",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99533,77.69619,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.000385,
+          "lon": 77.677736,
+          "tickets": 423,
+          "cis": 45.1,
+          "violation": "PARKING IN A MAIN ROAD",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00038,77.67774,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.995846,
+          "lon": 77.694748,
+          "tickets": 344,
+          "cis": 38.4,
+          "violation": "NO PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@12.99585,77.69475,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.161,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Chikkajala",
+      "lat": 13.179404,
+      "lon": 77.668611,
+      "n_hotspots": 16,
+      "violations": 5532,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@13.17940,77.66861,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 13.184263,
+          "lon": 77.679715,
+          "tickets": 1966,
+          "cis": 52.6,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.18426,77.67971,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.191234,
+          "lon": 77.646191,
+          "tickets": 793,
+          "cis": 45.0,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.19123,77.64619,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.185771,
+          "lon": 77.679901,
+          "tickets": 638,
+          "cis": 44.2,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.18577,77.67990,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.187039,
+          "lon": 77.680557,
+          "tickets": 580,
+          "cis": 39.8,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.18704,77.68056,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.18356,
+          "lon": 77.679648,
+          "tickets": 536,
+          "cis": 44.2,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.18356,77.67965,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.16,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Halasuru Gate",
+      "lat": 12.965564,
+      "lon": 77.585393,
+      "n_hotspots": 26,
+      "violations": 5145,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.96556,77.58539,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP080 - NR Road, SP Road Junction",
+          "lat": 12.964727,
+          "lon": 77.584031,
+          "tickets": 1806,
+          "cis": 61.3,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96473,77.58403,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP082 - KR Market Junction",
+          "lat": 12.964481,
+          "lon": 77.579956,
+          "tickets": 465,
+          "cis": 56.2,
+          "violation": "WRONG PARKING",
+          "context": "Wholesale market",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96448,77.57996,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP080 - NR Road, SP Road Junction",
+          "lat": 12.963804,
+          "lon": 77.583987,
+          "tickets": 445,
+          "cis": 52.2,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96380,77.58399,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP080 - NR Road, SP Road Junction",
+          "lat": 12.963929,
+          "lon": 77.582848,
+          "tickets": 405,
+          "cis": 54.5,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96393,77.58285,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP076 - Hudson Circle",
+          "lat": 12.967937,
+          "lon": 77.58856,
+          "tickets": 388,
+          "cis": 48.6,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96794,77.58856,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.149,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "HSR Layout",
+      "lat": 12.909281,
+      "lon": 77.639268,
+      "n_hotspots": 33,
+      "violations": 4520,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.90928,77.63927,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.912505,
+          "lon": 77.635378,
+          "tickets": 609,
+          "cis": 29.9,
+          "violation": "NO PARKING",
+          "context": "Metro / Transit hub",
+          "action": "Clear station approaches; push last-mile parking to lots.",
+          "gmaps": "https://www.google.com/maps/@12.91251,77.63538,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.912059,
+          "lon": 77.638129,
+          "tickets": 394,
+          "cis": 27.9,
+          "violation": "NO PARKING",
+          "context": "Metro / Transit hub",
+          "action": "Clear station approaches; push last-mile parking to lots.",
+          "gmaps": "https://www.google.com/maps/@12.91206,77.63813,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.906554,
+          "lon": 77.629624,
+          "tickets": 383,
+          "cis": 34.0,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.90655,77.62962,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.911256,
+          "lon": 77.638077,
+          "tickets": 367,
+          "cis": 25.7,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.91126,77.63808,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.912426,
+          "lon": 77.633736,
+          "tickets": 318,
+          "cis": 26.8,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.91243,77.63374,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.131,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "High ground",
+      "lat": 12.988435,
+      "lon": 77.58597,
+      "n_hotspots": 18,
+      "violations": 4273,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@12.98844,77.58597,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP032 - Windsor Circle",
+          "lat": 12.991493,
+          "lon": 77.588543,
+          "tickets": 1381,
+          "cis": 57.2,
+          "violation": "WRONG PARKING",
+          "context": "Entertainment",
+          "action": "Stagger show-time arrivals; deploy at peak hours.",
+          "gmaps": "https://www.google.com/maps/@12.99149,77.58854,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP032 - Windsor Circle",
+          "lat": 12.994312,
+          "lon": 77.589361,
+          "tickets": 794,
+          "cis": 43.7,
+          "violation": "WRONG PARKING",
+          "context": "Entertainment",
+          "action": "Stagger show-time arrivals; deploy at peak hours.",
+          "gmaps": "https://www.google.com/maps/@12.99431,77.58936,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP032 - Windsor Circle",
+          "lat": 12.993255,
+          "lon": 77.589173,
+          "tickets": 394,
+          "cis": 46.2,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99326,77.58917,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP054 - Shivananda Circle",
+          "lat": 12.984054,
+          "lon": 77.578265,
+          "tickets": 190,
+          "cis": 45.8,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.98405,77.57826,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP058 - Subbanna Junction",
+          "lat": 12.983663,
+          "lon": 77.577368,
+          "tickets": 183,
+          "cis": 47.0,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.98366,77.57737,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.123,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Bellandur",
+      "lat": 12.918043,
+      "lon": 77.679322,
+      "n_hotspots": 33,
+      "violations": 4142,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.91804,77.67932,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.926024,
+          "lon": 77.676572,
+          "tickets": 554,
+          "cis": 35.5,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.92602,77.67657,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.92715,
+          "lon": 77.679449,
+          "tickets": 496,
+          "cis": 35.3,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.92715,77.67945,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.927426,
+          "lon": 77.680531,
+          "tickets": 269,
+          "cis": 32.7,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.92743,77.68053,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.898938,
+          "lon": 77.675426,
+          "tickets": 262,
+          "cis": 28.0,
+          "violation": "WRONG PARKING",
+          "context": "Education",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.89894,77.67543,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.899919,
+          "lon": 77.675447,
+          "tickets": 243,
+          "cis": 26.9,
+          "violation": "NO PARKING",
+          "context": "Education",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.89992,77.67545,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.12,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Byatarayanapura",
+      "lat": 12.951063,
+      "lon": 77.529141,
+      "n_hotspots": 23,
+      "violations": 3929,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.95106,77.52914,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP096 - Gali Anjaneya Temple",
+          "lat": 12.952469,
+          "lon": 77.541161,
+          "tickets": 561,
+          "cis": 55.9,
+          "violation": "NO PARKING",
+          "context": "Religious",
+          "action": "Manage event/procession parking; pre-mark no-parking.",
+          "gmaps": "https://www.google.com/maps/@12.95247,77.54116,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.960961,
+          "lon": 77.527694,
+          "tickets": 515,
+          "cis": 28.2,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96096,77.52769,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP095 - Satellite Bus Stand, Mysore Road",
+          "lat": 12.953617,
+          "lon": 77.542753,
+          "tickets": 498,
+          "cis": 58.5,
+          "violation": "WRONG PARKING",
+          "context": "Metro / Transit hub",
+          "action": "Clear station approaches; push last-mile parking to lots.",
+          "gmaps": "https://www.google.com/maps/@12.95362,77.54275,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP095 - Satellite Bus Stand, Mysore Road",
+          "lat": 12.953907,
+          "lon": 77.543615,
+          "tickets": 467,
+          "cis": 52.1,
+          "violation": "WRONG PARKING",
+          "context": "Metro / Transit hub",
+          "action": "Clear station approaches; push last-mile parking to lots.",
+          "gmaps": "https://www.google.com/maps/@12.95391,77.54362,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP017 - Attiguppe Circle",
+          "lat": 12.960697,
+          "lon": 77.528839,
+          "tickets": 447,
+          "cis": 42.5,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96070,77.52884,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.113,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Hebbala",
+      "lat": 13.045231,
+      "lon": 77.590814,
+      "n_hotspots": 12,
+      "violations": 3802,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@13.04523,77.59081,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 13.035329,
+          "lon": 77.589058,
+          "tickets": 1806,
+          "cis": 39.2,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.03533,77.58906,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.035919,
+          "lon": 77.589274,
+          "tickets": 636,
+          "cis": 35.0,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.03592,77.58927,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.034912,
+          "lon": 77.588804,
+          "tickets": 625,
+          "cis": 33.9,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.03491,77.58880,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.049439,
+          "lon": 77.593398,
+          "tickets": 172,
+          "cis": 19.7,
+          "violation": "NO PARKING",
+          "context": "Mall / Shopping",
+          "action": "Engage mall valet; keep feeder roads clear.",
+          "gmaps": "https://www.google.com/maps/@13.04944,77.59340,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.033615,
+          "lon": 77.588522,
+          "tickets": 138,
+          "cis": 21.5,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.03362,77.58852,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.11,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Chamarajpet",
+      "lat": 12.968009,
+      "lon": 77.569148,
+      "n_hotspots": 16,
+      "violations": 3752,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.96801,77.56915,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP048 - Shanthala Junction",
+          "lat": 12.977246,
+          "lon": 77.57075,
+          "tickets": 1053,
+          "cis": 61.3,
+          "violation": "NO PARKING",
+          "context": "Metro / Transit hub",
+          "action": "Clear station approaches; push last-mile parking to lots.",
+          "gmaps": "https://www.google.com/maps/@12.97725,77.57075,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP083 - AS Char Street, Mysore Road",
+          "lat": 12.967675,
+          "lon": 77.574502,
+          "tickets": 753,
+          "cis": 61.3,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96768,77.57450,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP083 - AS Char Street, Mysore Road",
+          "lat": 12.968395,
+          "lon": 77.574796,
+          "tickets": 487,
+          "cis": 55.2,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96840,77.57480,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP083 - AS Char Street, Mysore Road",
+          "lat": 12.96618,
+          "lon": 77.574101,
+          "tickets": 284,
+          "cis": 56.0,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96618,77.57410,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP083 - AS Char Street, Mysore Road",
+          "lat": 12.964856,
+          "lon": 77.573617,
+          "tickets": 267,
+          "cis": 60.2,
+          "violation": "PARKING IN A MAIN ROAD",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.96486,77.57362,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-06-27",
+          "event": "Metro-station feeder overflow",
+          "risk": "High",
+          "why": "Metro-station feeder overflow (other) near Hosahalli Metro Station coincides with a known hotspot at BTP048 - Shanthala Junction; last-mile vehicles park on station approaches.",
+          "action": "Pre-position a patrol unit and tow vehicle the evening before; mark no-parking on approaches and brief the morning shift."
+        }
+      ],
+      "pressure": 0.108,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Electronic City",
+      "lat": 12.850565,
+      "lon": 77.660109,
+      "n_hotspots": 27,
+      "violations": 3562,
+      "top_violation": "WRONG PARKING",
+      "gmaps": "https://www.google.com/maps/@12.85056,77.66011,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.841881,
+          "lon": 77.646028,
+          "tickets": 693,
+          "cis": 33.4,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.84188,77.64603,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.841623,
+          "lon": 77.647455,
+          "tickets": 453,
+          "cis": 30.0,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.84162,77.64745,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.841774,
+          "lon": 77.645025,
+          "tickets": 440,
+          "cis": 31.3,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.84177,77.64502,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.840661,
+          "lon": 77.676782,
+          "tickets": 334,
+          "cis": 29.4,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.84066,77.67678,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.842099,
+          "lon": 77.644159,
+          "tickets": 214,
+          "cis": 25.6,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.84210,77.64416,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.103,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Pulikeshinagar(F.Town)",
+      "lat": 12.994969,
+      "lon": 77.614153,
+      "n_hotspots": 34,
+      "violations": 3344,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@12.99497,77.61415,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.99582,
+          "lon": 77.613494,
+          "tickets": 482,
+          "cis": 26.8,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99582,77.61349,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.999943,
+          "lon": 77.61098,
+          "tickets": 361,
+          "cis": 26.3,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99994,77.61098,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.995457,
+          "lon": 77.614073,
+          "tickets": 266,
+          "cis": 22.9,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99546,77.61407,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.994505,
+          "lon": 77.610266,
+          "tickets": 214,
+          "cis": 25.2,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.99450,77.61027,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 13.00012,
+          "lon": 77.611195,
+          "tickets": 158,
+          "cis": 20.9,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@13.00012,77.61119,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.097,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Halasur",
+      "lat": 12.973027,
+      "lon": 77.623182,
+      "n_hotspots": 30,
+      "violations": 3286,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@12.97303,77.62318,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "No Junction",
+          "lat": 12.973803,
+          "lon": 77.614507,
+          "tickets": 410,
+          "cis": 33.2,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97380,77.61451,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.971422,
+          "lon": 77.618238,
+          "tickets": 344,
+          "cis": 27.4,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97142,77.61824,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.973257,
+          "lon": 77.615773,
+          "tickets": 291,
+          "cis": 30.3,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97326,77.61577,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.973839,
+          "lon": 77.623178,
+          "tickets": 245,
+          "cis": 28.3,
+          "violation": "NO PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97384,77.62318,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "No Junction",
+          "lat": 12.973237,
+          "lon": 77.614844,
+          "tickets": 197,
+          "cis": 26.4,
+          "violation": "NO PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.97324,77.61484,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.095,
+      "tti": null,
+      "congestion": null
+    },
+    {
+      "district": "Basavanagudi",
+      "lat": 12.942717,
+      "lon": 77.57291,
+      "n_hotspots": 21,
+      "violations": 3218,
+      "top_violation": "NO PARKING",
+      "gmaps": "https://www.google.com/maps/@12.94272,77.57291,14z/data=!5m1!1e1",
+      "hotspots": [
+        {
+          "junction": "BTP108 - Tagore Park Junction",
+          "lat": 12.943195,
+          "lon": 77.571116,
+          "tickets": 776,
+          "cis": 56.8,
+          "violation": "WRONG PARKING",
+          "context": "Mixed / Other",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.94320,77.57112,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP108 - Tagore Park Junction",
+          "lat": 12.94478,
+          "lon": 77.571207,
+          "tickets": 503,
+          "cis": 53.0,
+          "violation": "WRONG PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.94478,77.57121,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP215 - Vanivillas Junction",
+          "lat": 12.945424,
+          "lon": 77.571241,
+          "tickets": 300,
+          "cis": 47.8,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.94542,77.57124,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP109 - Dewan Madhava Rao Junction",
+          "lat": 12.942031,
+          "lon": 77.571269,
+          "tickets": 166,
+          "cis": 45.2,
+          "violation": "WRONG PARKING",
+          "context": "Residential",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.94203,77.57127,16z/data=!5m1!1e1"
+        },
+        {
+          "junction": "BTP215 - Vanivillas Junction",
+          "lat": 12.945976,
+          "lon": 77.570464,
+          "tickets": 152,
+          "cis": 42.3,
+          "violation": "NO PARKING",
+          "context": "Commercial street",
+          "action": "Station a unit in the peak window; tow repeat offenders.",
+          "gmaps": "https://www.google.com/maps/@12.94598,77.57046,16z/data=!5m1!1e1"
+        }
+      ],
+      "events": [],
+      "pressure": 0.093,
+      "tti": null,
+      "congestion": null
+    }
+  ]
+}

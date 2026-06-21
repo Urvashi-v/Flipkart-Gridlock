@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gridlock · Sign in</title><style>
+ :root{--bg:#080b11;--bg2:#0b0f17;--card:#10151f;--line:#1c2531;--tx:#eef2f7;--mut:#7d8a9c;
+   --mint:#4ee3b8;--purple:#a78bfa;--red:#ff5d6c;--amber:#ff9f45}
+ *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--tx);
+   font:14px/1.5 'Inter',-apple-system,Segoe UI,Roboto,sans-serif}
+ a{text-decoration:none;color:inherit} .muted{color:var(--mut)}
+ .badge{font-size:10.5px;font-weight:700;border-radius:20px;padding:3px 9px;white-space:nowrap}
+ .badge.ok{background:rgba(78,227,184,.15);color:#7fe6c2}
+ .badge.bad{background:rgba(255,93,108,.15);color:#ff9aa3}
+ .badge.warn{background:rgba(255,159,69,.15);color:#ffc08a}
+
+ .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;
+   background:radial-gradient(1100px 560px at 50% -8%,#10283f,#05080d)}
+ .lbox{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;width:380px;
+   box-shadow:0 24px 60px #0009}
+ .brand{display:flex;align-items:center;gap:11px;font-size:24px;font-weight:800;margin-bottom:3px}
+ .brand .mk{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:18px;
+   background:linear-gradient(135deg,var(--mint),#2bd4cf);color:#06231b}
+ .brand b{color:var(--mint)}
+ .sub{color:var(--mut);font-size:13px;margin-bottom:20px}
+ label{font-size:12px;color:var(--mut);display:block;margin:11px 0 5px}
+ input{width:100%;background:#0a0f17;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:12px}
+ .go{width:100%;background:var(--mint);color:#06231b;border:none;border-radius:11px;padding:13px;font-weight:800;
+   margin-top:18px;cursor:pointer;font-size:15px}
+ .ghost{width:100%;background:#0e1521;border:1px solid var(--line);color:var(--tx);border-radius:11px;padding:11px;
+   margin-top:10px;cursor:pointer;font-weight:600;font-size:13px}
+ .hint{display:flex;gap:8px;margin-top:16px}
+ .hint b{flex:1;background:#0a0f17;border:1px solid var(--line);border-radius:10px;padding:9px;font-size:11px;
+   color:var(--mut);cursor:pointer;text-align:center} .hint b:hover{border-color:var(--mint)}
+ #err{color:#ff8a93;font-size:12.5px;margin-top:10px;min-height:16px}
+ code{background:#0a0f17;border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:11px}
+</style></head><body><div class="wrap"><div class="lbox">
+  <div class="brand"><span class="mk">🚦</span>Grid<b>lock</b></div>
+  <div class="sub">Parking Congestion Intelligence — sign in to your dashboard</div>
+  <label>Role / username</label><input id="u" value="viewer" autocomplete="username">
+  <label>Password</label><input id="p" type="password" autocomplete="current-password">
+  <button class="go" onclick="doLogin()">Sign in</button>
+  <button class="ghost" onclick="guest()">👁️ Continue as viewer — no login</button>
+  <div id="err"></div>
+  <div class="hint">
+    <b onclick="fill('admin','admin@gridlock')">admin demo<br>full + ingestion</b>
+    <b onclick="fill('viewer','viewer@gridlock')">viewer demo<br>analytics only</b>
+  </div>
+</div></div>
+<script>
+const API="http://localhost:8000";
+function fill(u,p){u_.value=u;p_.value=p;} const u_=document.getElementById('u'),p_=document.getElementById('p');
+function go(){ location.href='dashboard.html'; }
+function guest(){ localStorage.setItem('gridlock_role','viewer'); localStorage.setItem('gridlock_ingest','0');
+  localStorage.removeItem('gridlock_token'); go(); }
+async function doLogin(){ const err=document.getElementById('err'); err.innerHTML='';
+  try{ const r=await fetch(API+"/auth/login",{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({username:u_.value.trim(),password:p_.value})});
+    if(r.status===401) throw new Error('Invalid username or password.');
+    if(!r.ok) throw new Error('Login failed ('+r.status+').');
+    const d=await r.json(); localStorage.setItem('gridlock_token',d.token);
+    localStorage.setItem('gridlock_role',d.role); localStorage.setItem('gridlock_ingest',d.can_ingest?'1':'0'); go();
+  }catch(e){ const net=(e instanceof TypeError)||/fetch/i.test(e.message||'');
+    err.innerHTML = net ? "Can't reach the API. Start it: <code>uvicorn api:app</code> and open via "
+      +"<code>http://localhost:8540/portal.html</code>. Or just Continue as viewer." : (e.message||'Login failed.'); }
+}
+u_.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+p_.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+</script></body></html>
