@@ -70,7 +70,7 @@ def main():
         ), max_width=300)
         folium.CircleMarker(
             location=[r["lat"], r["lon"]], radius=radius,
-            color=color, weight=1, fill=True, fill_color=color, fill_opacity=0.55,
+            color="#7f0000", weight=1.5, fill=True, fill_color=color, fill_opacity=0.7,
             popup=popup,
             tooltip=f"#{int(r['rank'])} CIS {r['CIS']:.0f} · {int(r['n_tickets']):,} tickets",
         ).add_to(fg_zone)
@@ -109,6 +109,24 @@ def main():
     m.get_root().html.add_child(folium.Element(legend))
 
     folium.LayerControl(collapsed=False).add_to(m)
+
+    # ---- self-healing size fix ------------------------------------------
+    # When this map is embedded in an <iframe> (the dashboard's Parking Map
+    # tab), Leaflet boots before the iframe has its final dimensions, so the
+    # tiles+circle markers (the big red dots) never get positioned. Folium
+    # never calls invalidateSize() on its own, so we inject it here: the map
+    # re-measures itself on load and on every resize, making the embedded view
+    # identical to the standalone file.
+    fix_js = folium.Element(
+        "<script>(function(){function fix(){try{" + m.get_name() +
+        ".invalidateSize(true);}catch(e){}}"
+        "window.addEventListener('load',function(){"
+        "setTimeout(fix,150);setTimeout(fix,500);setTimeout(fix,1200);});"
+        "window.addEventListener('resize',fix);"
+        "document.addEventListener('visibilitychange',fix);})();</script>"
+    )
+    m.get_root().html.add_child(fix_js)
+
     m.save(str(MAP_HTML))
     print(f"Wrote {MAP_HTML}")
     print(f"  heat points : {len(heat_data):,}")

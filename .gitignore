@@ -1,0 +1,50 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- IDE / editor ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Testing ----
+.pytest_cache/
+htmlcov/
+.coverage
+
+# ---- Claude Code ----
+.claude/
+
+# ---- Secrets (never commit) ----
+.env
+*.env.local
+
+# ---- Raw / large data (share separately, not in git) ----
+data/violation_raw.csv
+data/violations_clean.parquet
+data/combined.csv
+data/ingested.csv
+
+# ---- NOTE: outputs/ is COMMITTED (not ignored) ----
+# The deployed app on Render serves outputs/ directly.
+# It contains the pre-built dashboard, maps, analytics, and data files
+# that the API reads at runtime (~19 MB total). Without it the app
+# won't work unless you rebuild from the raw CSV.

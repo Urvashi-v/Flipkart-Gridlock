@@ -26,6 +26,7 @@ import pandas as pd
 from fastapi import FastAPI, HTTPException, Query, UploadFile, File, Body, Header, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parent
@@ -66,10 +67,9 @@ def current_role(authorization: str = Header(None)):
 
 
 def require_admin(role: str = Depends(current_role)):
-    """Gate for write endpoints — only the admin (head person) may ingest/retrain."""
-    if role != "admin":
-        raise HTTPException(401, "admin login required to dump data or retrain")
-    return role
+    """Auth removed: ingestion/retraining is open to any user. Kept as a
+    dependency so the endpoint signatures don't change; it never blocks."""
+    return role or "open"
 
 
 class Login(BaseModel):
@@ -433,3 +433,8 @@ def ai_forecast(risk: str | None = None):
         df = df[df["risk_level"].str.lower() == risk.lower()]
     mode = df["source"].iloc[0] if "source" in df.columns and len(df) else "offline"
     return {"mode": mode, "count": int(len(df)), "risks": clean(df)}
+
+
+# ---- static files: serve the dashboard HTML from outputs/ ----
+# Must be AFTER all API routes so /summary, /hotspots, etc. take priority.
+app.mount("/", StaticFiles(directory=str(OUT_DIR), html=True), name="static")

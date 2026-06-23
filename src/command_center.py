@@ -95,7 +95,7 @@ TEMPLATE = r"""<!doctype html><html><head><meta charset="utf-8">
 // doesn't load a dashboard-inside-the-dashboard. Only show it when standalone.
 if (window.self !== window.top) { var _h = document.querySelector('.home'); if (_h) _h.remove(); }
 const DATA = __DATA__;
-const API = "http://localhost:8000";   // optional live API (api.py)
+const API = location.origin;   // same-origin — works locally and deployed
 let districts = DATA.districts, source = DATA.source, openIdx = -1, focusLayer = null;
 
 const map = L.map('map',{zoomControl:false}).setView([12.968,77.59],12);

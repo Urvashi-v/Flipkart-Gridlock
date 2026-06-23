@@ -51,6 +51,7 @@
    <div><h1>Grid<b>lock</b> · Data Ingestion &amp; Retraining</h1>
      <div class="sub">Feed the system fresh violations — then retrain it on the new data.</div></div>
    <span class="api" id="api" style="margin-left:auto">API: checking…</span>
+   <a class="home" href="dashboard.html">← Dashboard</a>
  </div>
 
  <div class="row">
@@ -111,7 +112,7 @@
    <h2>🧠 Retrain the system on your new data</h2>
    <div class="sub">Rebuilds everything on <b>base + ingested</b> — re-detects hotspots,
      re-scores impact, and <b>retrains the forecast model</b>. ~1 minute.</div>
-   <button class="go" id="trainbtn"> Retrain system now</button>
+   <button class="go" id="trainbtn">🧠 Retrain system now</button>
    <span id="tstatus" style="margin-left:10px;color:#9fb0c0;font-size:13px"></span>
    <div class="pbar"><i id="pbar"></i></div>
    <div class="log" id="tlog"></div>
@@ -122,12 +123,11 @@
  </div>
 </div>
 <script>
-const API="http://localhost:8000";
+const API="";
 let mode="file", pin=null, marker=null, lmap=null;
 
 async function api(path,opts){ opts=opts||{}; opts.headers=Object.assign({},opts.headers||{});
-  const t=localStorage.getItem('gridlock_token'); if(t) opts.headers['Authorization']='Bearer '+t;
-  const r=await fetch(API+path,opts); if(r.status===401) throw new Error('Admin login required (open this from the portal as admin).');
+  const r=await fetch(API+path,opts);
   if(!r.ok) throw new Error(await r.text()); return r.json(); }
 function animate(el,to){ const from=parseInt(el.textContent.replace(/\D/g,''))||0; const t0=performance.now();
   (function step(t){const p=Math.min(1,(t-t0)/500); el.textContent=Math.round(from+(to-from)*p).toLocaleString();

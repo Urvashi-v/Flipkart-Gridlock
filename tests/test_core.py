@@ -148,15 +148,8 @@ def test_auth_login_roles(client):
     assert client.post("/auth/login", json={"username": "admin", "password": "x"}).status_code == 401
 
 
-def test_ingest_requires_admin(client):
+def test_ingest_is_open_to_anyone(client):
+    # Auth was removed: ingestion/retraining must work with NO token at all.
     rec = {"lat": 12.97, "lng": 77.59, "vehicle": "CAR", "violation": "NO PARKING"}
-    # anonymous + viewer are blocked
-    assert client.post("/ingest/record", json=rec).status_code == 401
-    vtok = client.post("/auth/login", json={"username": "viewer", "password": "viewer@gridlock"}).json()["token"]
-    assert client.post("/ingest/record", json=rec,
-                       headers={"Authorization": f"Bearer {vtok}"}).status_code == 401
-    # admin is allowed
-    atok = client.post("/auth/login", json={"username": "admin", "password": "admin@gridlock"}).json()["token"]
-    h = {"Authorization": f"Bearer {atok}"}
-    assert client.post("/ingest/record", json=rec, headers=h).status_code == 200
-    client.post("/dataset/reset", headers=h)        # clean up the test record
+    assert client.post("/ingest/record", json=rec).status_code == 200
+    client.post("/dataset/reset")                   # clean up the test record (also unauthenticated)

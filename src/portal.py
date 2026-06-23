@@ -12,7 +12,7 @@ portal.py  —  generates the web front-end as THREE files:
 Auth is enforced by the API; analytics are embedded so viewing works offline.
 A sidebar officer chatbot answers quantitatively in plain language.
 """
-import sys, base64, json, math
+import sys, base64, json, math, time
 from pathlib import Path
 import pandas as pd
 
@@ -305,15 +305,18 @@ def build_panes():
 
     # ---- PARKING MAP (the Folium heatmap built by build_map.py) ----
     # iframe needs onload→resize so Leaflet recomputes its viewport and the
-    # zone markers + legend + layer-control land in the right place
-    panes["parking_map"] = """
+    # zone markers + legend + layer-control land in the right place.
+    # ?v=<build stamp> busts the browser cache so a rebuilt map (new red dots)
+    # is never served stale — the #1 cause of "the red dots don't show".
+    mver = int(time.time())
+    panes["parking_map"] = f"""
       <div class='note'>Severity-weighted heat layer of illegal-parking violations, plus
         ranked enforcement-zone markers (sized by volume, coloured by CIS tier) and the
         worst junctions. Click any marker for its breakdown.
-        <a href='parking_congestion_map.html' target='_blank' style='float:right;color:var(--mint)'>Open standalone ↗</a></div>
+        <a href='parking_congestion_map.html?v={mver}' target='_blank' style='float:right;color:var(--mint)'>Open standalone ↗</a></div>
       <div class='mapwrap'>
-        <iframe id='pmap-frame' src='parking_congestion_map.html' class='mapframe'
-          onload="setTimeout(()=>{try{this.contentWindow.dispatchEvent(new Event('resize'));}catch(e){}},120)"></iframe>
+        <iframe id='pmap-frame' data-src='parking_congestion_map.html?v={mver}' class='mapframe'
+          onload="setTimeout(()=>{{try{{this.contentWindow.dispatchEvent(new Event('resize'));}}catch(e){{}}}},120)"></iframe>
       </div>"""
 
     panes["command"] = """
@@ -419,7 +422,7 @@ GROUPS = [
     ("ENFORCEMENT", [("deployment", "🎯", "Deployment", False), ("impact", "📉", "Impact", False),
                      ("events", "📅", "Events", False)]),
     ("INSIGHT", [("analytics", "📊", "Analytics", False)]),
-    ("DATA", [("ingest", "📥", "Data Ingestion", True)]),
+    ("DATA", [("ingest", "📥", "Data Ingestion", False)]),
 ]
 SUBTITLE = {
     "overview": "Citywide snapshot of illegal-parking hotspots and enforcement.",
@@ -431,7 +434,7 @@ SUBTITLE = {
     "impact": "Did crackdowns work? Before/after (DiD) and the whack-a-mole displacement check.",
     "events": "Festival / sale / rally surges and detected anomaly spike-days.",
     "analytics": "Every standalone chart in one place — demand-side and enforcement-side.",
-    "ingest": "Admin only — dump fresh data and retrain the whole system on base + new records.",
+    "ingest": "Dump fresh data and retrain the whole system on base + new records.",
 }
 
 # shared design system
@@ -485,7 +488,7 @@ def login_html():
   </div>
 </div></div>
 <script>
-const API="http://localhost:8000";
+const API=location.origin;
 function fill(u,p){u_.value=u;p_.value=p;} const u_=document.getElementById('u'),p_=document.getElementById('p');
 function go(){ location.href='dashboard.html'; }
 function guest(){ localStorage.setItem('gridlock_role','viewer'); localStorage.setItem('gridlock_ingest','0');
@@ -630,8 +633,7 @@ def dashboard_html(panes, pages, sidebar, chat_ctx):
    <div class="logo"><span class="mk">🚦</span>Grid<b>lock</b></div>
    <div class="ws"><span class="wi">🏙️</span><div><b>Bengaluru Traffic Police</b><span>Live · 298k records</span></div></div>
    __SIDEBAR__
-   <div class="s-foot"><span class="s-role" id="rolebadge">—</span>
-     <button onclick="logout()">Sign out</button></div>
+   <div class="s-foot"><span class="s-role viewer" id="rolebadge">● Open access</span></div>
  </aside>
  <div class="content">
    <header class="topbar">
@@ -650,24 +652,30 @@ def dashboard_html(panes, pages, sidebar, chat_ctx):
   <div id="cchips"><b onclick="chatSend('Worst hotspots?')">Worst hotspots</b><b onclick="chatSend('Busiest police station?')">Busiest station</b><b onclick="chatSend('When is the peak?')">Peak hour</b><b onclick="chatSend('Where should we patrol today?')">Where to patrol</b><b onclick="chatSend('Any events this week?')">Events</b></div>
   <div id="cin"><input id="cintxt" placeholder="Ask about hotspots, patrols, events…"><button onclick="chatSend()">➤</button></div></div>
 <script>
-const API="http://localhost:8000", PAGES=__PAGES__;
-const role=localStorage.getItem('gridlock_role');
-if(!role){ location.replace('portal.html'); }
-const canIngest=localStorage.getItem('gridlock_ingest')==='1', online=!!localStorage.getItem('gridlock_token');
-function logout(){ localStorage.clear(); location.replace('portal.html'); }
+const API=location.origin, PAGES=__PAGES__;
+// Auth removed — open access. Everyone gets every tab, including Data Ingestion.
+const role='analyst', canIngest=true; let online=false;
 function show(pid){
   document.querySelectorAll('.nav').forEach(t=>t.classList.toggle('on',t.dataset.p===pid));
   document.querySelectorAll('.pane').forEach(s=>s.classList.toggle('on',s.id==='p-'+pid));
   const p=PAGES[pid]; if(p){ document.getElementById('ptitle').innerHTML=p[0]; document.getElementById('psub').textContent=p[1]; }
   document.getElementById('side').classList.remove('open'); window.scrollTo({top:0,behavior:'smooth'});
+  // Lazy-load the Folium map: only give the iframe its src once the pane is
+  // visible, so Leaflet boots at full size and the red enforcement-zone dots
+  // actually paint. (Booting inside a display:none pane → 0×0 → no markers.)
+  if (pid === 'parking_map'){ const f=document.getElementById('pmap-frame');
+    if (f && !f.src && f.dataset.src){ f.src = f.dataset.src; }
+    else if (f){ setTimeout(()=>{ try{ f.contentWindow.dispatchEvent(new Event('resize')); }catch(e){} }, 180); } }
 }
 (function(){
-  const rb=document.getElementById('rolebadge'); rb.textContent=(role||'viewer').toUpperCase()+(canIngest?' · admin':' · read-only');
-  rb.className='s-role '+(canIngest?'admin':'viewer'); document.getElementById('avatar').textContent=(role||'V')[0].toUpperCase();
-  document.querySelectorAll('[data-admin]').forEach(t=>{ if(!canIngest) t.style.display='none'; });
-  const dot=document.getElementById('apidot'); dot.textContent=online?'● API online':'○ offline (embedded)'; dot.style.color=online?'#4ee3b8':'#7d8a9c';
+  document.getElementById('avatar').textContent='G';
   document.querySelectorAll('.nav').forEach(t=>t.onclick=()=>show(t.dataset.p));
-  const first=[...document.querySelectorAll('.nav')].find(t=>t.style.display!=='none'); if(first) show(first.dataset.p);
+  const first=document.querySelector('.nav'); if(first) show(first.dataset.p);
+  // Live API status — green when the backend is reachable (ingestion/AI chat work), grey when embedded/offline.
+  const dot=document.getElementById('apidot'); dot.textContent='○ checking…'; dot.style.color='#7d8a9c';
+  fetch(API+'/',{cache:'no-store'}).then(r=>{ online=r.ok;
+    dot.textContent=r.ok?'● API online':'○ offline (embedded)'; dot.style.color=r.ok?'#4ee3b8':'#7d8a9c';
+  }).catch(()=>{ online=false; dot.textContent='○ offline (embedded)'; dot.style.color='#7d8a9c'; });
 })();
 
 /* ===== global hover tooltip (works on any element with data-t) ===== */
@@ -763,17 +771,18 @@ def main():
     except Exception:
         chat_ctx = "{}"
 
-    (OUT_DIR / "portal.html").write_text(login_html(), encoding="utf-8")
     (OUT_DIR / "dashboard.html").write_text(
         dashboard_html(panes, pages, sidebar, chat_ctx), encoding="utf-8")
-    (OUT_DIR / "index.html").write_text(
+    # Auth removed: site root + the old login URL go straight into the dashboard.
+    redirect = (
         '<!doctype html><meta charset="utf-8">'
-        '<meta http-equiv="refresh" content="0;url=portal.html">'
+        '<meta http-equiv="refresh" content="0;url=dashboard.html">'
         '<title>Gridlock</title><body style="background:#080b11;color:#7d8a9c;'
-        'font-family:Inter,sans-serif">Redirecting to '
-        '<a href="portal.html" style="color:#4ee3b8">sign in</a>…</body>',
-        encoding="utf-8")
-    print("Wrote portal.html (login) | dashboard.html (app) | index.html (redirect to login)")
+        'font-family:Inter,sans-serif">Opening the '
+        '<a href="dashboard.html" style="color:#4ee3b8">dashboard</a>…</body>')
+    (OUT_DIR / "portal.html").write_text(redirect, encoding="utf-8")
+    (OUT_DIR / "index.html").write_text(redirect, encoding="utf-8")
+    print("Wrote dashboard.html (app) | portal.html + index.html (redirect -> dashboard)")
 
 
 if __name__ == "__main__":

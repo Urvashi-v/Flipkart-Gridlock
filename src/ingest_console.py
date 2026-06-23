@@ -142,8 +142,7 @@ const API="__API__";
 let mode="file", pin=null, marker=null, lmap=null;
 
 async function api(path,opts){ opts=opts||{}; opts.headers=Object.assign({},opts.headers||{});
-  const t=localStorage.getItem('gridlock_token'); if(t) opts.headers['Authorization']='Bearer '+t;
-  const r=await fetch(API+path,opts); if(r.status===401) throw new Error('Admin login required (open this from the portal as admin).');
+  const r=await fetch(API+path,opts);
   if(!r.ok) throw new Error(await r.text()); return r.json(); }
 function animate(el,to){ const from=parseInt(el.textContent.replace(/\D/g,''))||0; const t0=performance.now();
   (function step(t){const p=Math.min(1,(t-t0)/500); el.textContent=Math.round(from+(to-from)*p).toLocaleString();
@@ -233,7 +232,7 @@ ping(); setInterval(refreshStats,5000);
 
 
 def main():
-    api_url = os.environ.get("GRIDLOCK_API_URL", "http://localhost:8000")
+    api_url = os.environ.get("GRIDLOCK_API_URL", "")
     OUT_HTML.write_text(TEMPLATE.replace("__API__", api_url), encoding="utf-8")
     print(f"Wrote {OUT_HTML}")
     print(f"  API target: {api_url}  (start it with: uvicorn api:app)")
