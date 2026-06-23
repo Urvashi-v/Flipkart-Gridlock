@@ -130,13 +130,7 @@ class Intervention(BaseModel):
 
 
 # ---------------------------------------------------------------- endpoints
-@app.get("/")
-def root():
-    return {"service": "Gridlock Parking Congestion Intelligence API",
-            "docs": "/docs",
-            "endpoints": ["/summary", "/hotspots", "/zone/{id}", "/score",
-                          "/forecast", "/ai-forecast", "/congestion", "/deployment",
-                          "/impact", "/events", "/context"]}
+# GET / is handled by the StaticFiles mount (serves index.html → dashboard)
 
 
 @app.get("/summary")
