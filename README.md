@@ -1,337 +1,427 @@
-# Gridlock — Parking Congestion Intelligence
+# GRIDLOCK — AI-Powered Parking Congestion Intelligence System
 
-**Problem:** *Poor visibility on parking-induced congestion.* On-street illegal
-parking near commercial areas, metro stations and markets chokes carriageways
-and intersections. Enforcement today is patrol-based and reactive, there is no
-heatmap of violations vs. congestion impact, and zones are hard to prioritise.
+**Real-Time Hotspot Detection, Predictive Enforcement & Causal Impact Measurement Across Bengaluru's Urban Road Network**
 
-**Gridlock** turns ~298k geotagged Bengaluru Traffic Police parking-violation
-records into a complete **AI-driven parking-intelligence product** that closes the
-enforcement loop end-to-end:
+> *298,277 real Bengaluru Traffic Police parking-violation records → a live AI command centre that detects hotspots, predicts them before they form, optimises patrol deployment, and causally proves whether enforcement actually reduced congestion.*
 
-> **detect → score → explain → forecast → deploy → measure impact → check displacement → re-target**
-
-1. **Detects illegal-parking hotspots** — ~150 m, patrol-able enforcement zones.
-2. **Scores their congestion impact** — a tunable **Congestion Impact Score (CIS)**
-   per zone (volume · severity · junction · vehicle · persistence).
-3. **Explains why** — each hotspot tagged to its demand generator (metro/market/…).
-4. **Forecasts** next week's hotspots (validated, beats baseline).
-5. **Optimises enforcement** — a deployment roster with an ROI coverage curve.
-6. **Proves it works** — before/after **Difference-in-Differences** + a
-   **whack-a-mole** displacement check.
-7. **Ships as a product** — dashboard, live app, **REST API**, **printable field
-   briefings**, an **auto daily digest**, Docker, and a **test suite**.
-
-Why it's hard to beat: not one clever feature, but the *whole loop* built from one
-messy real dataset — with every estimate transparent, tunable, and honestly
-caveated.
-
-📣 **Presenting it?** See [`DEMO_SCRIPT.md`](DEMO_SCRIPT.md) — a timed ~3-min
-click-path with exact narration, judge Q&A, and a failure fallback.
+**Live Demo:** [https://gridlock-qfse.onrender.com](https://gridlock-qfse.onrender.com)
 
 ---
 
-## How it works (pipeline)
+## Quick Overview
 
-| Step | Script | What it does | Why |
-|------|--------|--------------|-----|
-| 0 | `src/profile_data.py` | Measures the raw CSV (geometry, time, violation/vehicle mix, validation) — run once | Never trust the spec; measure the file before modelling |
-| 1 | `src/pipeline.py` | Cleans GPS, parses timestamps→IST, reduces each ticket to its worst flow-blocking offence, drops non-parking offences, engineers severity/vehicle/junction/validation features → `data/violations_clean.parquet` | One clean, fast table every later step reuses |
-| 2 | `src/hotspots.py` | Snaps points to a 150 m grid, scores each zone's CIS, ranks & tiers → `outputs/hotspots.csv` | Bounded, comparable, deployable zones + the core metric |
-| 3 | `src/context.py` | **Demand-generator attribution** (metro/market/mall/…) → `outputs/zone_context.csv` | Explain *why* each hotspot exists |
-| 5 | `src/build_map.py` | Folium map: severity-weighted heat layer + ranked zone markers + worst junctions → `outputs/parking_congestion_map.html` | Fills the "no heatmap" gap |
-| 6 | `src/temporal.py` | Hour×weekday demand heatmap, violation/vehicle mix, per-zone patrol windows → `outputs/patrol_schedule.csv` + PNGs | Answers *when* to enforce → proactive |
-| 7 | `src/forecast.py` | Gradient-boosted **7-day-ahead forecast** of each zone's load → `outputs/forecast_hotspots.csv` | Plan enforcement *before* congestion happens |
-| 8 | `src/impact.py` | **Before/after enforcement impact** (Difference-in-Differences) → `outputs/impact_report.csv` | Prove whether a crackdown worked |
-| 9 | `src/displacement.py` | **Whack-a-mole check** — did violations move to neighbours? → `outputs/displacement_report.csv` | Treat a block, or the whole corridor |
-| 10 | `src/optimize.py` | **Patrol-allocation optimiser + ROI curve** → `outputs/deployment_plan.csv` | Turn the ranking into a deployment roster |
-| 11 | `src/anomaly.py` | **Event/surge detection** (robust z-score) → `outputs/events.csv` | Pre-position for festivals/sales/matches |
-| 12 | `src/ai_agent.py` | **AI event agent** — Claude + web search finds real upcoming events and reasons about hotspot risk → `outputs/ai_briefings.md` | Day-ahead, event-aware, *explained* forecast |
-| 13 | `src/congestion.py` | **Live congestion feed** — fuses parking pressure with Google traffic → `outputs/congestion_live.json` | Real-time district congestion |
-| 14 | `src/command_center.py` | **Live Congestion Command Centre** (pulsing, clickable districts) → `outputs/congestion_command.html` | The real-time ops drill-down |
-| 15 | `src/dashboard.py` | Self-contained executive dashboard → `outputs/index.html` | One file an ops chief can open |
-| — | `app.py` | **Live Streamlit app**, 8 tabs, adjustable CIS weights | Interactive, policy-tunable front-end |
+GRIDLOCK is a full-stack AI platform that closes the entire enforcement loop:
 
-### Product surfaces (it's a platform, not a script)
+```
+DETECT → SCORE → EXPLAIN → FORECAST → DEPLOY → MEASURE → CHECK DISPLACEMENT → RE-TARGET
+```
+
+It ships as a **web dashboard** (10 interactive sections + chatbot), a **REST API** (13 endpoints), a **Streamlit app** (interactive weight sliders), **printable PDF briefings**, and an **automated daily digest** — all built from one real police dataset.
+
+---
+
+## How to Run This Project
+
+There are two ways to get the project: **clone from GitHub** or **use a downloaded copy** (ZIP/folder). Both work identically. Follow the path that matches your situation.
+
+---
+
+### PATH A: Running from GitHub (Clone)
+
+This is the recommended way. You get the full git history and can pull updates.
+
+#### Step 1: Open a terminal
+
+- **Windows:** Open **PowerShell** or **Command Prompt**. You can do this by pressing `Win + R`, typing `powershell`, and hitting Enter. Or open VS Code and use its built-in terminal (`Ctrl + `` ` ``).
+- **macOS:** Open **Terminal** (search "Terminal" in Spotlight).
+- **Linux:** Open your terminal emulator.
+
+#### Step 2: Navigate to where you want the project
+
+Choose a folder where you want the project to live. For example:
+
+```bash
+# Windows — go to your Desktop:
+cd C:\Users\YourName\Desktop
+
+# macOS / Linux — go to your home directory:
+cd ~
+```
+
+#### Step 3: Clone the repository
+
+```bash
+git clone https://github.com/Urvashi-v/Flipkart-Gridlock.git
+```
+
+You'll see output like:
+```
+Cloning into 'Flipkart-Gridlock'...
+remote: Enumerating objects: ...
+Receiving objects: 100% ...
+```
+
+This creates a folder called `Flipkart-Gridlock` with all the project files.
+
+#### Step 4: Enter the project folder
+
+```bash
+cd Flipkart-Gridlock
+```
+
+Now skip ahead to **[Setting Up the Environment](#setting-up-the-environment)** below.
+
+---
+
+### PATH B: Running from Downloaded Source Code (ZIP / Shared Folder)
+
+If someone gave you the project as a ZIP file or a folder (not through GitHub):
+
+#### Step 1: Extract the ZIP (if applicable)
+
+- **Windows:** Right-click the ZIP → **"Extract All..."** → choose a location (e.g., Desktop) → click **Extract**.
+- **macOS:** Double-click the ZIP. It extracts automatically.
+- **Linux:** `unzip Flipkart-Gridlock.zip`
+
+You should now have a folder with files like `api.py`, `config.py`, `run_all.py`, `requirements.txt`, and subfolders `src/`, `outputs/`, `tests/`.
+
+#### Step 2: Open a terminal inside the project folder
+
+**Option A — VS Code (easiest):**
+1. Open VS Code.
+2. Go to **File → Open Folder** → select the project folder (the one containing `api.py`).
+3. Open the terminal: **Terminal → New Terminal** (or press `Ctrl + `` ` ``).
+4. You're now inside the project folder. Confirm by running `ls` (macOS/Linux) or `dir` (Windows) — you should see `api.py`, `src/`, `outputs/`, etc.
+
+**Option B — Manual navigation:**
+```bash
+# Windows (replace the path with where you extracted it):
+cd C:\Users\YourName\Desktop\Flipkart-Gridlock
+
+# macOS / Linux:
+cd ~/Desktop/Flipkart-Gridlock
+```
+
+Now continue to the next section.
+
+---
+
+### Setting Up the Environment
+
+These steps are the same whether you cloned from GitHub or downloaded the folder.
+
+#### Step 1: Verify Python is installed
+
+```bash
+python --version
+```
+
+You should see something like `Python 3.12.3`. **You need Python 3.10 or higher.**
+
+If you see an error ("python is not recognized"):
+- **Windows:** Download Python from [python.org/downloads](https://www.python.org/downloads/). During installation, **check the box that says "Add Python to PATH"**. Then restart your terminal and try again.
+- **macOS:** Run `python3 --version` instead. If that works, use `python3` instead of `python` in all commands below.
+- **Linux:** `sudo apt install python3 python3-venv python3-pip` (Ubuntu/Debian) or equivalent for your distro.
+
+#### Step 2: Create a virtual environment
+
+A virtual environment keeps this project's packages separate from your system Python. This prevents conflicts.
+
+**Windows (PowerShell):**
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks the activation script with a red error about "execution policy":
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+.venv\Scripts\Activate.ps1
+```
+
+**Windows (Command Prompt / cmd):**
+```cmd
+python -m venv .venv
+.venv\Scripts\activate.bat
+```
+
+**macOS / Linux:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**How to know it worked:** You'll see `(.venv)` at the start of your terminal prompt, like this:
+```
+(.venv) C:\Users\YourName\Desktop\Flipkart-Gridlock>
+```
+
+> **Important:** Every time you open a new terminal to work on this project, you need to activate the virtual environment again using the same activate command above.
+
+#### Step 3: Install all dependencies
 
 ```bash
 pip install -r requirements.txt
-python run_all.py                              # 1. rebuild all artifacts (~70s)
-uvicorn api:app                                # 2. REST API + auth        → :8000/docs
-python -m http.server 8540 --directory outputs # 3. serve the web portal
-streamlit run app.py                           # 4. interactive ops console → :8501
-pytest                                         # 5. trust checks (14 tests)
 ```
 
-Then open **`http://localhost:8540/portal.html`** — the role-gated tabbed portal.
-(Windows: `demo_up.ps1` starts all servers and opens everything.)
+This downloads and installs all the libraries the project needs: pandas, numpy, scikit-learn, fastapi, folium, streamlit, etc.
 
-### 🔐 Roles — admin vs viewer
+**Expected time:** 1–3 minutes depending on your internet speed.
 
-The portal is a **tabbed** app (no endless scroll) behind a login, with two roles:
+**Expected output:** A lot of "Downloading..." and "Installing..." lines, ending with:
+```
+Successfully installed ... (long list of packages)
+```
 
-| Role | Login | Can do |
-|------|-------|--------|
-| **Admin** (the one head person) | `admin` / `admin@gridlock` | View **all analytics** + the **Data Ingestion** tab (dump fresh data, retrain the system) |
-| **Viewer** | `viewer` / `viewer@gridlock` | View **all analytics** — read-only, no ingestion |
+If you see errors:
+- Make sure your virtual environment is activated (you see `(.venv)` in the prompt).
+- Try: `pip install --upgrade pip` first, then re-run the install command.
+- On Windows, if a package fails to compile, make sure you have Python 3.10–3.12 (not 3.13 or 3.14).
 
-The boundary is **enforced by the API**, not just the UI: `POST /ingest/*`, `/rebuild`,
-and `/dataset/reset` require an **admin** token (`/auth/login` → HMAC-signed token);
-viewers and anonymous callers get `401`. Change credentials via env vars
-`GRIDLOCK_ADMIN_PW`, `GRIDLOCK_VIEWER_PW`, and the signing key `GRIDLOCK_SECRET`.
+---
 
-| Surface | What it is | Who uses it |
-|---------|------------|-------------|
-| `outputs/index.html` | Executive dashboard (one file) | Leadership |
-| `app.py` (Streamlit) | Live console — tune CIS weights, 8 tabs | Control room |
-| `api.py` (FastAPI) | `/summary /hotspots /score /forecast /deployment /impact /events /context` | City systems / mobile app |
-| `outputs/briefing_pack.pdf` | One printable page per top hotspot | Patrol commanders |
-| `outputs/daily_digest.md` | Auto-generated morning brief | Ops desk |
-| `outputs/parking_congestion_map.html` | Interactive heatmap | Everyone |
+### Starting the Application
 
-Or run the app in Docker (no Python setup needed):
+#### The simple way: one command, one server
 
 ```bash
-docker compose up --build    # dashboard → http://localhost:8501
-# REST API instead:
-docker run -p 8000:8000 gridlock uvicorn api:app --host 0.0.0.0 --port 8000
+uvicorn api:app --port 8000
 ```
 
-Then open `outputs/index.html` (dashboard) and `outputs/parking_congestion_map.html` (map).
+You'll see:
+```
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+Now open your browser and go to:
+
+### **http://localhost:8000**
+
+That's it. The entire dashboard loads — all 10 sections, the parking congestion map with the red enforcement-zone markers, the live command centre, analytics, the chatbot, data ingestion — everything works.
+
+> **No login required.** The system has open access. Just open the URL and explore.
+
+#### To stop the server
+
+Press `Ctrl + C` in the terminal where the server is running.
 
 ---
 
-## Demand-generator context (`src/context.py`)
+### Running the Full Experience (Dashboard + Streamlit + API Docs)
 
-Every hotspot is tagged to the land use pulling the parking — metro/transit hub,
-wholesale market, mall, hospital, education, religious, entertainment, commercial
-street — from its address + junction text. Turns "where" into "**why**", and ties
-hotspots to the "commercial areas, metro stations, events" in the problem
-statement. (Commercial streets 38%, malls 13%, markets/metro/entertainment each a
-distinct, addressable generator.)
+If you want to see everything the project offers, open **two terminals** (both inside the project folder, both with the virtual environment activated):
 
-## Enforcement optimiser + ROI (`src/optimize.py`)
-
-A ranked list isn't a plan. We merge the 150 m cells into distinct deployable
-**enforcement points**, score the impact a patrol captures in each point's peak
-3-hour window, and greedily allocate a fixed number of patrol-shifts. The output
-is a **deployment roster** plus a **coverage curve**: a small set of points hold a
-large share of all **violations**, and patrolling them captures a meaningful chunk
-after the window/capture discount. Whack-a-mole points are flagged to deploy as corridors.
-
-## Event / surge detection (`src/anomaly.py`)
-
-A robust z-score (median/MAD, spike-resistant) flags days a zone's load suddenly
-surges — festivals, sales, matches, rallies (it catches 31 Dec and exhibition
-spikes). Lets enforcement pre-position. *Caveat: surges partly reflect enforcement
-drives, not only true demand.*
-
----
-
-## 🚦 Live Congestion Command Centre (`src/congestion.py` + `src/command_center.py`)
-
-A full-screen, real-time map (`outputs/congestion_command.html`) where each
-police **district pulses by its current congestion** (green→amber→orange→red,
-blinking when heavy/severe) and is **clickable**. Click a district → the map flies
-to it and a panel lists the **"areas of attention for police"** — its worst
-hotspots, each with a recommended action, AI event flags, and a one-click link to
-**Google Maps live traffic** for that exact spot.
-
-**Where the real congestion comes from (two levels, both honest):**
-- **Google deep-links — work now, no key, no billing.** Every district & hotspot
-  links to Google Maps centred there with the live Traffic layer on
-  (`…/@lat,lng,16z/data=!5m1!1e1`) — real Google congestion, one click.
-- **Quantitative travel-time index — optional, needs `GOOGLE_MAPS_API_KEY`.**
-  `congestion.py` calls Google's Distance Matrix (`duration_in_traffic / duration`)
-  per district to drive the blink with *measured* data; falls back to a realistic
-  time-of-day simulation otherwise (so the demo always pulses).
-
-```
-congestion = 0.45 · (our parking pressure) + 0.55 · (live traffic index)
+**Terminal 1 — the main server (API + Dashboard):**
+```bash
+uvicorn api:app --port 8000
 ```
 
-It runs **standalone** (just open the HTML — congestion is simulated client-side).
-If `api.py` is running, the page polls `GET /congestion` for genuinely live values
-(real Google indices when a key is set). To enable real indices:
+**Terminal 2 — the Streamlit interactive app:**
+```bash
+streamlit run app.py
+```
+
+Now open these in your browser:
+
+| URL | What it is |
+|---|---|
+| **http://localhost:8000** | Main dashboard — 10 tabs, chatbot, maps, analytics, data ingestion |
+| **http://localhost:8501** | Streamlit app — drag the CIS weight sliders and watch zones re-rank live |
+| **http://localhost:8000/docs** | REST API documentation (Swagger UI) — try every endpoint interactively |
+
+#### Windows shortcut: one-click launch
+
+If you're on Windows, there's a script that starts everything and opens all surfaces automatically:
 
 ```powershell
-$env:GOOGLE_MAPS_API_KEY = "AIza..."   # Distance Matrix API enabled in Google Cloud
-python src/congestion.py
+powershell -ExecutionPolicy Bypass -File demo_up.ps1
 ```
 
-## 🤖 AI event agent — the layer that makes it *truly* predictive (`src/ai_agent.py`)
-
-Everything else is statistics — it knows where parking is *usually* bad. It can't
-know that next Tuesday is a festival, that a match fills a stadium on Saturday, or
-that a mall starts a sale on Friday. This module is an **internet-connected Claude
-agent** (`claude-opus-4-8`) that closes that gap:
-
-1. uses the **web_search tool** to find real upcoming demand drivers in the city
-   for the next 7 days (festivals/holidays, venue events, rallies, mall/market sales);
-2. maps each event to the hotspots it will overload (by area);
-3. **reasons** about it — producing, per hotspot per day, an event-aware risk level,
-   a plain-English *why*, and a concrete "prepare the day before" action for police.
-
-```bash
-# live mode (fetches real events + Claude reasoning):
-setx ANTHROPIC_API_KEY "sk-ant-..."     # Windows (new shell after); or $env: for this shell
-python src/ai_agent.py
-```
-
-**Graceful degradation:** with no `ANTHROPIC_API_KEY` (or no network), it falls back
-to a clearly-labelled offline sample anchored to your real hotspots, so the
-dashboard and demo never break. Outputs: `ai_briefings.md` (the readable
-"tomorrow needs groundwork" brief), `ai_event_forecast.csv`, `ai_events.json`.
-Surfaced in the dashboard, the app's **🤖 AI event forecast** tab, and the API's
-`/ai-forecast` endpoint.
-
-## Predictive model — forecast next week's hotspots (`src/forecast.py`)
-
-We build a **zone × day panel** (zero-filled) and train a `HistGradientBoosting`
-regressor to predict a zone's ticket count **7 days ahead**. Every feature
-(lags, rolling means, weekday seasonality, static zone attributes) is computed
-from history **≥7 days old**, so all 7 future days are forecast at once with no
-leakage and no iterative error build-up.
-
-- Validated on a **time-based 21-day holdout** vs. a strong *same-weekday-last-week*
-  baseline → **beats baseline**, and predicts **which** zones will be hot with
-  **per-zone weekly correlation r ≈ 0.85**.
-- Honest read: citywide *daily* volume is dominated by unpredictable patrol
-  scheduling; the **spatial** structure (which zones) is what's predictable — and
-  that's exactly what enforcement planning needs.
-
-## Enforcement-impact module — did the crackdown work? (`src/impact.py`)
-
-Answers *"we enforced zone X from date D — did illegal parking actually fall, or
-was the whole city quieter that month?"* using **Difference-in-Differences**:
-
-```
-expected_after = zone_before × (city_after / city_before)   # counterfactual
-DiD change     = (zone_after − expected_after) / zone_before # <0 = real improvement
-```
-
-The rest of the city is the control, so a zone only counts as improved if it fell
-**more than the city did**. A Welch t-test flags significance. `measure_impact()`
-is the reusable production API — pass real crackdown dates for audit-grade numbers;
-the auto change-point scan is a screen for the demo. *Caveat: observational data;
-fewer tickets can mean better compliance or displacement, so pair with the forecast
-residual.*
-
-## Displacement / whack-a-mole check (`src/displacement.py`)
-
-A drop at an enforced zone is only a real win if the cars don't reappear next
-door. For each intervention we compare the treated zone's drop with the
-DiD-adjusted change in zones within **400 m**:
-
-```
-displacement_% = neighbour DiD gain / treated drop
-```
-
-- **> 40%** → *Displacement* (whack-a-mole): treat the **corridor**, not the block.
-- **≤ 10%** → *Genuine reduction* (often benefit even spills to neighbours).
-
-On this data, most crackdowns produced genuine reductions, but a few high-profile
-junctions (e.g. **Elite Junction, ~200% displacement**) simply pushed parking onto
-adjacent streets — exactly the zones to saturate as a corridor.
-
-## Live app (`app.py`)
-
-`streamlit run app.py` opens an interactive console: drag the five CIS-weight
-sliders and the map recolours and zones re-rank instantly; filter by police
-station / volume; tabs for the **next-week forecast** and **enforcement impact**
-(with the displacement check). The score is policy, not a black box.
-
-## Deploy (`Dockerfile` / `docker-compose.yml`)
-
-The image bundles the pre-built artifacts, so the app starts with no Python setup
-and **without** the 105 MB raw CSV:
-
-```bash
-docker compose up --build            # → http://localhost:8501
-```
-
-To rebuild artifacts inside the container, mount the raw CSV and set
-`GRIDLOCK_RAW_CSV` (see the commented block in `docker-compose.yml`), then
-`docker compose run --rm gridlock python run_all.py`. The raw-CSV path is also
-overridable natively via the same env var (defaults to the original Downloads
-path).
+This opens: the dashboard, the command centre map, the briefing PDF, the daily digest, the Streamlit app, and the API docs — all at once.
 
 ---
 
-## The Congestion Impact Score (CIS)
+### What You'll See When You Open the Dashboard
 
-We have no live traffic-speed feed, so we **engineer a defensible proxy** for how
-much each zone hurts traffic flow, from signals present in the data:
+The dashboard has a **dark sidebar on the left** with 10 sections. Here's what each one shows:
 
-```
-CIS = 100 × ( 0.35·volume + 0.25·severity + 0.20·junction
-             + 0.10·vehicle + 0.10·persistence )
-```
+| Sidebar Section | What's Inside |
+|---|---|
+| **Overview** | City-wide snapshot: 4 metric cards, demand-by-hour chart (24 bars), top hotspots ranking, demand generators. **Hover any bar** for exact numbers. |
+| **Hotspots** | The core intelligence: a **filterable table of 1,254 zones** (filter by severity tier, police station, search text, or minimum CIS score). Plus: busiest police stations, violations by tier, top violation types. |
+| **Parking Map** | A full Folium map embedded in the dashboard: purple/blue heat layer showing violation density + **200 red circle markers** (the enforcement zones, sized by violation volume). Toggle layers with the control panel in the top-right. Click any red dot for its full breakdown. |
+| **Command Centre** | A real-time ops map: 24 police districts **pulse and blink** by congestion level (green → amber → red). **Click any district** → it zooms in and shows its worst junctions with recommended actions and Google Maps traffic links. |
+| **Forecast & AI** | The 7-day-ahead ML prediction + the AI event agent's flags for upcoming festivals, matches, and sales with plain-English reasoning about which hotspots they'll overload. |
+| **Deployment** | An optimised patrol roster: exactly where, when, and which day to deploy. A coverage curve shows that 25 patrol-shifts can intercept ~48% of all citywide violations. |
+| **Impact** | Causal proof: Difference-in-Differences analysis showing whether enforcement crackdowns actually reduced violations vs. the city-wide trend. One measured intervention: **91% reduction, p = 0.0002**. |
+| **Events** | Detected surge days — festivals, flash sales, cricket matches — with a citywide timeline chart. |
+| **Analytics** | Every chart in one scrollable view: 8 full-width cards covering demand context, temporal heatmap, forecast accuracy, ROI curve, impact demo, displacement analysis, events timeline. |
+| **Data Ingestion** | Drag-drop a CSV/Excel/JSON of new violation records, pin a violation on a map, or paste data. Click **"Retrain system"** and the entire pipeline rebuilds in ~60 seconds. A before/after delta card shows what changed. |
 
-| Component | Meaning | Source signal |
-|-----------|---------|---------------|
-| **volume** | chronic pressure | log-scaled, false-positive-discounted ticket count |
-| **severity** | how flow-blocking the offences are | `PARKING IN A MAIN ROAD`=1.0 … `NO PARKING`=0.45 |
-| **junction** | intersection choke | share of tickets at a tagged junction |
-| **vehicle** | road footprint of what's parked | bus/truck=1.0 … two-wheeler=0.3 |
-| **persistence** | chronic vs one-off | spread across distinct days & hours |
+**The chatbot:** Click the **"Ask the assistant..."** pill in the top bar. Try asking:
+- *"Worst hotspots?"*
+- *"Busiest police station?"*
+- *"Where should we patrol today?"*
+- *"Any events this week?"*
+- *"When is the peak hour?"*
 
-Each component is min-max normalised across zones, so the score discriminates
-between hotspots. **All weights and severities live in `config.py`** — tune them
-to local policy without touching the code. Rejected tickets are down-weighted
-(×0.25) so likely false positives don't inflate a zone.
+It answers instantly with real numbers from the data.
 
 ---
 
-## Key findings on this data
+### Rebuilding from Raw Data (Optional — not needed to run the app)
 
-- **298,277** parking violations over ~5 months (Nov 2023 – Apr 2024).
-- Violations are **highly concentrated** — a small fraction of 150 m zones
-  account for most tickets, exactly the targeting opportunity the brief seeks.
-- **7 Critical + 186 High** zones; worst are the Shivajinagar/Upparpet/City-Market
-  commercial core (Safina Plaza, Elite, KR Market, Sagar Theatre junctions).
-- **Bimodal timing:** morning 06–11 dominates commercial districts, but
-  wholesale markets (KR Market) peak **23:00–02:00** — different shifts for
-  different zones.
-- `WRONG PARKING` + `NO PARKING` are 90% of offences; two-wheelers and cars
-  dominate volume, but buses/trucks raise a zone's blocking severity.
+The `outputs/` folder comes **pre-built** with all analytics, charts, maps, and data files. You do NOT need the raw dataset just to view and use the dashboard.
 
-## Honest caveat
+But if you want to rebuild everything from scratch (e.g., to verify reproducibility or after ingesting new data):
 
-Tickets are generated *by patrols*, so timing reflects enforcement effort as well
-as true demand (note the sharp drop after 2pm = patrols off, not roads clear).
-**Spatial** hotspots are robust; the temporal layer should be read as "when we
-currently catch violations." Deployed live, the system closes this loop by
-steering patrols toward under-watched, high-CIS zones.
+1. **Get the raw dataset** — `violation_raw.csv` (~105 MB). This is not included in the repo due to size. Ask the project team or download from the shared link.
 
-## Outputs
+2. **Place it in the data folder:**
+   ```
+   data/violation_raw.csv
+   ```
+
+3. **Run the full pipeline:**
+   ```bash
+   python run_all.py
+   ```
+   
+   This takes ~70 seconds and runs 17 steps:
+   - Cleans and feature-engineers the raw data
+   - Detects 1,254 enforcement zones and scores each with CIS
+   - Tags every hotspot to its demand generator (market, metro, mall, etc.)
+   - Builds the Folium heatmap with 200 ranked zone markers
+   - Runs temporal analysis and generates patrol schedules
+   - Trains a 7-day-ahead forecast model
+   - Measures enforcement impact with Difference-in-Differences
+   - Checks for whack-a-mole displacement
+   - Optimises patrol allocation with ROI curve
+   - Detects event/surge anomalies
+   - Runs the AI event agent (Claude + web search, falls back to offline sample)
+   - Generates the live congestion feed
+   - Builds the command centre, ingestion console, briefings, digest, and dashboard
+
+4. **Start the server:**
+   ```bash
+   uvicorn api:app --port 8000
+   ```
+
+---
+
+### Enabling AI Features (Optional)
+
+Everything works fully offline. These API keys unlock enhanced capabilities:
+
+#### Claude AI Chatbot + Event Agent
+
+```powershell
+# Windows PowerShell (current session):
+$env:ANTHROPIC_API_KEY = "sk-ant-your-key-here"
+
+# macOS / Linux:
+export ANTHROPIC_API_KEY="sk-ant-your-key-here"
+```
+
+**What it does:** Upgrades the chatbot from instant rule-based answers to Claude AI reasoning. Also enables the event agent to search the web for real upcoming Bengaluru events and reason about which hotspots they'll affect.
+
+**Without the key:** The chatbot still works (instant rules with real data). The event agent uses a realistic offline sample. Nothing breaks.
+
+#### Google Maps Live Traffic
+
+```powershell
+# Windows PowerShell:
+$env:GOOGLE_MAPS_API_KEY = "AIza-your-key-here"
+
+# macOS / Linux:
+export GOOGLE_MAPS_API_KEY="AIza-your-key-here"
+```
+
+**What it does:** The Command Centre uses real Google Distance Matrix travel-time indices instead of simulated congestion.
+
+**Without the key:** The Command Centre still pulses and works — it simulates realistic time-of-day congestion patterns. The Google Maps deep-links (click any junction → opens Google Maps with live traffic) always work regardless.
+
+
+Expected:
+```
+15 passed, 1 warning in ~1.5s
+```
+
+---
+
+### Troubleshooting
+
+| Problem | Solution |
+|---|---|
+| `python` not found | Install Python 3.10+ from [python.org](https://www.python.org/downloads/). Check "Add to PATH" during install. Restart your terminal. On macOS/Linux, try `python3` instead. |
+| `pip install` fails | Make sure virtual environment is active (`.venv`). Try `pip install --upgrade pip` first. Use Python 3.10–3.12, not 3.13/3.14. |
+| PowerShell blocks `.ps1` scripts | Run: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` |
+| "Address already in use" (port 8000) | Another program is using port 8000. Use a different port: `uvicorn api:app --port 8001` and open `http://localhost:8001` |
+| Parking Map shows no red dots | Hard-refresh with `Ctrl + Shift + R`. The map lazy-loads when you click the tab — give it 2–3 seconds. |
+| Chatbot says "offline" | Normal without `ANTHROPIC_API_KEY`. It uses instant rule-based answers that are fully functional. |
+| Command Centre not pulsing | Use Chrome or Edge. Give it a few seconds to load the district data. |
+| "Artifacts not built" API error | The `outputs/` folder is missing data. Run `python run_all.py` (needs the raw CSV in `data/`). |
+| Streamlit won't start | Try: `streamlit run app.py --server.port 8502` |
+
+---
+
+### Project Structure
 
 ```
-outputs/
-  index.html                      ← executive dashboard (start here)
-  parking_congestion_map.html     ← interactive heatmap
-  hotspots.csv                    ← all 1,239 zones ranked by CIS
-  patrol_schedule.csv             ← per-zone recommended enforcement window
-  forecast_hotspots.csv           ← zones ranked by predicted next-week load
-  forecast_next_week.csv          ← zone × day forecast
-  forecast_accuracy.png           ← holdout model-vs-actual
-  zone_context.csv                ← demand-generator tag per zone
-  context_summary.png             ← violations by land use
-  deployment_plan.csv             ← optimised patrol roster (distinct points)
-  optimize_coverage.png           ← enforcement ROI coverage curve
-  events.csv                      ← detected event/surge days
-  events_timeline.png             ← citywide daily load with spikes
-  briefing_pack.pdf               ← printable one-page briefing per top zone
-  daily_digest.md                 ← auto-generated daily ops brief
-  ai_briefings.md                 ← AI event-aware day-ahead brief (with reasoning)
-  ai_event_forecast.csv           ← per zone-day event risk + AI reasoning
-  ai_events.json                  ← raw events the agent found (provenance)
-  congestion_command.html         ← LIVE command centre (pulsing clickable districts)
-  congestion_live.json            ← district congestion feed (parking + Google traffic)
-  impact_report.csv               ← before/after DiD effect per zone + verdict
-  impact_demo.png                 ← clearest measured reduction
-  displacement_report.csv         ← whack-a-mole verdict per intervention
-  displacement_demo.png           ← treated zone vs neighbours, before/after
-  temporal_hour_dow.png           ← hour × weekday demand
-  violation_mix.png               ← violation & vehicle breakdown
+Flipkart-Gridlock/
+│
+├── api.py                  # FastAPI server (REST API + serves the dashboard)
+├── app.py                  # Streamlit interactive app (CIS weight sliders)
+├── config.py               # All tuneable parameters (CIS weights, grid size)
+├── run_all.py              # Rebuild everything from raw data (17 steps, ~70s)
+├── requirements.txt        # Python dependencies
+├── demo_up.ps1             # Windows: one-click demo launcher
+├── render.yaml             # Render.com cloud deployment config
+│
+├── src/                    # Source modules (one per pipeline step)
+│   ├── pipeline.py         # Clean + feature-engineer raw data
+│   ├── hotspots.py         # Detect zones, score CIS, rank & tier
+│   ├── context.py          # Tag hotspots to demand generators
+│   ├── build_map.py        # Folium heatmap + zone markers
+│   ├── temporal.py         # Hour × weekday analysis, patrol windows
+│   ├── forecast.py         # 7-day-ahead ML forecast
+│   ├── impact.py           # Difference-in-Differences enforcement impact
+│   ├── displacement.py     # Whack-a-mole displacement check
+│   ├── optimize.py         # Patrol-allocation optimiser + ROI curve
+│   ├── anomaly.py          # Event/surge spike detection
+│   ├── ai_agent.py         # Claude AI + web search event agent
+│   ├── congestion.py       # Live congestion feed (Google + parking)
+│   ├── command_center.py   # Live command centre HTML generator
+│   ├── ingest_console.py   # Data ingestion console HTML generator
+│   ├── briefing.py         # Printable PDF briefing pack
+│   ├── digest.py           # Daily ops digest
+│   ├── portal.py           # Main dashboard generator (10 sections)
+│   ├── chat.py             # Officer chatbot brain (rules + AI)
+│   └── ingest.py           # Data ingestion logic
+│
+├── outputs/                # Pre-built artifacts (ready to use, no rebuild needed)
+│   ├── dashboard.html      # The main app (10 tabs, chatbot, filters, tooltips)
+│   ├── parking_congestion_map.html  # Folium map (heat + 200 red zone markers)
+│   ├── congestion_command.html      # Live command centre (pulsing districts)
+│   ├── ingest_console.html          # Data ingestion interface
+│   ├── briefing_pack.pdf            # Printable field briefings
+│   ├── daily_digest.md              # Auto-generated ops brief
+│   ├── hotspots.csv                 # 1,254 zones ranked by CIS
+│   └── (+ 20 more CSVs, PNGs, JSONs)
+│
+├── tests/
+│   └── test_core.py        # 15 automated tests
+│
+└── data/                   # Data directory
+    └── violation_raw.csv   # Raw dataset (NOT included — 105 MB)
 ```
+
+---
+
+### Tech Stack
+
+Python 3.12 · FastAPI · Uvicorn · scikit-learn · pandas · NumPy · SciPy · Folium · Leaflet.js · Plotly · Matplotlib · Claude AI (Opus) with live web search · Google Maps Distance Matrix · Streamlit · pytest
+
+---
+
+*Built for GRIDLOCK 2.0 — Flipkart × Bengaluru Traffic Police × HackerEarth*
